@@ -54,7 +54,7 @@ class WeatherData implements SubjectInterface
     }
     
     /**
-     * Return changed value
+     * Returns changed value
      */
     public function hasChanged()
     {
@@ -120,7 +120,7 @@ class WeatherData implements SubjectInterface
     }
     
     /**
-     * Return temperature
+     * Returns temperature
      * @return float
      */
     public function getTemperature()
@@ -129,7 +129,7 @@ class WeatherData implements SubjectInterface
     }
     
     /**
-     * Return humidity
+     * Returns humidity
      * @return float
      */
     public function getHumidity()
@@ -138,7 +138,7 @@ class WeatherData implements SubjectInterface
     }
     
     /**
-     * Return pressure
+     * Returns pressure
      * @return float
      */
     public function getPressure()

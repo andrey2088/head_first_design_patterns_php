@@ -10,7 +10,8 @@ class MainController
     public static function main()
     {
         //$controller = new StrategyController();
-        $controller = new ObserverController();
+        //$controller = new ObserverController();
+        $controller = new DecoratorController();
         $controller->main();
     }
 
