@@ -66,6 +66,6 @@ class Duck
     public function swim()
     {
         $message = "All ducks float, even decoys!";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

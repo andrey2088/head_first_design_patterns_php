@@ -7,6 +7,6 @@ class FlyWithWings implements FlyBehaviorInterface
     public function fly()
     {
         $message = "I'm flying!";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

@@ -21,6 +21,6 @@ class MallardDuck extends Duck
     public function display()
     {
         $message = "I'm a real Mallard duck";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

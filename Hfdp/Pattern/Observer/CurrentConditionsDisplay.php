@@ -50,6 +50,6 @@ class CurrentConditionsDisplay implements ObserverInterface, DisplayElementInter
     {
         $message = "Current conditions: " . number_format($this->temperature, 1) . "F degrees and " 
             . number_format($this->humidity, 1) . "% humidity";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

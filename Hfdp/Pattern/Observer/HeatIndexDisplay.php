@@ -43,7 +43,7 @@ class HeatIndexDisplay implements ObserverInterface, DisplayElementInterface
     public function display()
     {
         $message = "Heat index is " . number_format($this->heatIndex, 5);
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
     
     /**

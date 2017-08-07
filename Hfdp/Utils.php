@@ -6,11 +6,11 @@ class Utils
 {
     public static function output($message)
     {
-        echo $message . "<br />";
+        echo $message;
     }
     
-    public static function indent()
+    public static function outputWithBr($message)
     {
-        echo "<br /><br />";
+        echo $message . "<br />";
     }
 }

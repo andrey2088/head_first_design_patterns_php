@@ -7,6 +7,6 @@ class FlyRocketPowered implements FlyBehaviorInterface
     public function fly()
     {
         $message = "I'm flying with a rocked!";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

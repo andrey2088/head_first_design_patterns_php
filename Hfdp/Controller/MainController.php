@@ -11,7 +11,8 @@ class MainController
     {
         //$controller = new StrategyController();
         //$controller = new ObserverController();
-        $controller = new DecoratorController();
+        //$controller = new DecoratorController();
+        $controller = new FactoryController();
         $controller->main();
     }
 

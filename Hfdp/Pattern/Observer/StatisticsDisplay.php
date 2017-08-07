@@ -71,6 +71,6 @@ class StatisticsDisplay implements ObserverInterface, DisplayElementInterface
     {
         $message = "Avg/Max/Min temperature = " . number_format($this->tempSum / $this->numReadings, 1) . "/" 
             . number_format($this->maxTemp, 1) . "/" . number_format($this->minTemp, 1);
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

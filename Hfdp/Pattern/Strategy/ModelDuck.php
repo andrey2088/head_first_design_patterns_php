@@ -21,6 +21,6 @@ class ModelDuck extends Duck
     public function display()
     {
         $message = "I'm a model duck";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

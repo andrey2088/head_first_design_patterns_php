@@ -7,6 +7,6 @@ class Quack implements QuackBehaviorInterface
     public function quack()
     {
         $message = "Quack";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }

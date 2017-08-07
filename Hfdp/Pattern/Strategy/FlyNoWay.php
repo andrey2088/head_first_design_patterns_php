@@ -7,6 +7,6 @@ class FlyNoWay implements FlyBehaviorInterface
     public function fly()
     {
         $message = "I can't fly";
-        \Hfdp\Utils::output($message);
+        \Hfdp\Utils::outputWithBr($message);
     }
 }
