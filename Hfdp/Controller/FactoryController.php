@@ -4,6 +4,7 @@ namespace Hfdp\Controller;
 
 use Hfdp\Pattern\Factory\Simple as SimpleFactory;
 use Hfdp\Pattern\Factory\Method as FactoryMethod;
+use Hfdp\Pattern\Factory\Abstractt as AbstractFactory;
 
 class FactoryController
 {
@@ -54,6 +55,36 @@ class FactoryController
         
         $pizza = $chicagoStore->orderPizza("veggie");
         echo "Joel ordered a " . $pizza->getName() . "<br /><br />";
+        
+        
+        // abstract factory
+        echo "<br /><b>Abstract Factory</b><br /><br />";
+        
+        $nyStore = new AbstractFactory\NyPizzaStore();
+        $chicagoStore = new AbstractFactory\ChicagoPizzaStore();
+        
+        $pizza = $nyStore->orderPizza("cheese");
+        echo "Ethan ordered a " . $pizza . "<br />";
+        
+        $pizza = $chicagoStore->orderPizza("cheese");
+        echo "Ethan ordered a " . $pizza . "<br />";
+        
+        $pizza = $nyStore->orderPizza("clam");
+        echo "Ethan ordered a " . $pizza . "<br />";
+        
+        $pizza = $chicagoStore->orderPizza("clam");
+        echo "Ethan ordered a " . $pizza . "<br />";
+        
+        $pizza = $nyStore->orderPizza("pepperoni");
+        echo "Ethan ordered a " . $pizza . "<br />";
+        
+        $pizza = $chicagoStore->orderPizza("pepperoni");
+        echo "Ethan ordered a " . $pizza . "<br />";
+        
+        $pizza = $nyStore->orderPizza("veggie");
+        echo "Ethan ordered a " . $pizza . "<br />";
+        
+        $pizza = $chicagoStore->orderPizza("veggie");
+        echo "Ethan ordered a " . $pizza . "<br />";
     }
-
 }
