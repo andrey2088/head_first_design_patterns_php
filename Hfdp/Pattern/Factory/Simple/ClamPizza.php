@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Factory\Simple;
 
-class ClamPizza extends Pizza
+class ClamPizza extends AbstractPizza
 {
     /**
      * Constructor

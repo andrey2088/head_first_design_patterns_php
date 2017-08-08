@@ -7,7 +7,7 @@ class SimplePizzaFactory
     /**
      * Create pizza
      * @param string $type
-     * @return Pizza
+     * @return AbstractPizza
      */
     public function createPizza($type)
     {

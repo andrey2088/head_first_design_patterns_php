@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Factory\Abstractt;
 
-class VeggiePizza extends Pizza
+class VeggiePizza extends AbstractPizza
 {
     /**
      * @var PizzaIngredientFactory

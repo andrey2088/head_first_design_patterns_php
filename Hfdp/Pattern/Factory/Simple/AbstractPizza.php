@@ -1,8 +1,8 @@
 <?php
 
-namespace Hfdp\Pattern\Factory\Method;
+namespace Hfdp\Pattern\Factory\Simple;
 
-abstract class Pizza
+abstract class AbstractPizza
 {
     /**
      * @var string
@@ -29,15 +29,7 @@ abstract class Pizza
      */
     public function prepare()
     {
-        $message = "Preparing " . $this->name . "<br />";
-        $message .= "Tossing dough...<br />";
-        $message .= "Adding sauce...<br />";
-        $message .= "Adding toppings: <br />";
-        
-        foreach ($this->toppings as $topping) {
-            $message .= "&emsp;&emsp;" . $topping . "<br />";
-        }
-        echo $message;
+        echo "Preparing " . $this->name . "<br />";
     }
     
     /**

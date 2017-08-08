@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Factory\Method;
 
-class ChicagoStyleClamPizza extends Pizza
+class ChicagoStyleClamPizza extends AbstractPizza
 {
     /**
      * Constructor

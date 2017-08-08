@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Factory\Abstractt;
 
-abstract class Pizza
+abstract class AbstractPizza
 {
     /**
      * @var string
@@ -106,7 +106,7 @@ abstract class Pizza
             $result .= "&emsp;&emsp;";
             foreach ($this->veggies as $i => $veggie) {
                 $result .= $veggie;
-                if ($i < count($this->veggies)) {
+                if ($i < count($this->veggies) - 1) {
                     $result .= ", ";
                 }
             }

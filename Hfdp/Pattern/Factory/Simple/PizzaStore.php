@@ -19,9 +19,9 @@ class PizzaStore
     }
     
     /**
-     * Order Pizza
+     * Order pizza
      * @param string $type
-     * @return Pizza
+     * @return AbstractPizza
      */
     public function orderPizza($type)
     {

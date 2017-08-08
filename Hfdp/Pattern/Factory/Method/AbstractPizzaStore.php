@@ -2,12 +2,12 @@
 
 namespace Hfdp\Pattern\Factory\Method;
 
-abstract class PizzaStore
+abstract class AbstractPizzaStore
 {
     /**
-     * Order Pizza
+     * Order pizza
      * @param string $type
-     * @return Pizza
+     * @return AbstractPizza
      */
     public function orderPizza($type)
     {
@@ -24,7 +24,7 @@ abstract class PizzaStore
     /**
      * Create pizza
      * @param string $type
-     * @return Pizza
+     * @return AbstractPizza
      */
     abstract protected function createPizza($type);
 }

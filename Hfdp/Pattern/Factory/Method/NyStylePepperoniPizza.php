@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Factory\Method;
 
-class NyStylePepperoniPizza extends Pizza
+class NyStylePepperoniPizza extends AbstractPizza
 {
     /**
      * Constructor

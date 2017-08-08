@@ -2,12 +2,12 @@
 
 namespace Hfdp\Pattern\Factory\Method;
 
-class NyPizzaStore extends PizzaStore
+class NyPizzaStore extends AbstractPizzaStore
 {
     /**
      * Create pizza
      * @param string $item
-     * @return Pizza
+     * @return AbstractPizza
      */
     public function createPizza($item)
     {
