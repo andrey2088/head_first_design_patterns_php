@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-abstract class Beverage
+abstract class AbstractBeverage
 {
     /**
      * @var string

@@ -2,18 +2,18 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-class Whip extends CondimentDecorator
+class Whip extends AbstractCondimentDecorator
 {   
     /**
-     * @var Beverage
+     * @var AbstractBeverage
      */
     private $beverage;
     
     /**
      * Constructor
-     * @param Beverage $beverage
+     * @param AbstractBeverage $beverage
      */
-    public function __construct(Beverage $beverage)
+    public function __construct(AbstractBeverage $beverage)
     {
         $this->beverage = $beverage;
     }

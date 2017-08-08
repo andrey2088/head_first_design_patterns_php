@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-abstract class CondimentDecorator extends Beverage
+abstract class AbstractCondimentDecorator extends AbstractBeverage
 {   
     /**
      * Returns beverage description

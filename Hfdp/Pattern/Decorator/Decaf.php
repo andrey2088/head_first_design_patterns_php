@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-class Decaf extends Beverage
+class Decaf extends AbstractBeverage
 {
     /**
      * Constructor

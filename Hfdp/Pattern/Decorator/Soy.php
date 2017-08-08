@@ -2,18 +2,18 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-class Soy extends CondimentDecorator
+class Soy extends AbstractCondimentDecorator
 {   
     /**
-     * @var Beverage
+     * @var AbstractBeverage
      */
     private $beverage;
     
     /**
      * Constructor
-     * @param Beverage $beverage
+     * @param AbstractBeverage $beverage
      */
-    public function __construct(Beverage $beverage)
+    public function __construct(AbstractBeverage $beverage)
     {
         $this->beverage = $beverage;
     }

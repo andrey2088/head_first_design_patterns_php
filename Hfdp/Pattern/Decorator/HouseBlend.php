@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-class HouseBlend extends Beverage
+class HouseBlend extends AbstractBeverage
 {
     /**
      * Constructor

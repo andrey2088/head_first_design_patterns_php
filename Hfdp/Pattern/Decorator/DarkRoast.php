@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-class DarkRoast extends Beverage
+class DarkRoast extends AbstractBeverage
 {
     /**
      * Constructor

@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Decorator;
 
-class Espresso extends Beverage
+class Espresso extends AbstractBeverage
 {
     /**
      * Constructor
