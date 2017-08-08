@@ -7,7 +7,7 @@ use Hfdp\Pattern\Observer as Observer;
 class ObserverController
 {
     /**
-     * @return Response
+     * Main
      */
     public function main()
     {

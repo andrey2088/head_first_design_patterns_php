@@ -7,7 +7,7 @@ use Hfdp\Pattern\Decorator as Decorator;
 class DecoratorController
 {
     /**
-     * @return Response
+     * Main
      */
     public function main()
     {

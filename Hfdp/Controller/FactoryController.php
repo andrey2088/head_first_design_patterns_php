@@ -9,7 +9,7 @@ use Hfdp\Pattern\Factory\Abstractt as AbstractFactory;
 class FactoryController
 {
     /**
-     * @return Response
+     * Main
      */
     public function main()
     {

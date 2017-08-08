@@ -7,7 +7,7 @@ use Hfdp\Pattern\Strategy as Strategy;
 class StrategyController
 {
     /**
-     * @return Response
+     * Main
      */
     public function main()
     {
