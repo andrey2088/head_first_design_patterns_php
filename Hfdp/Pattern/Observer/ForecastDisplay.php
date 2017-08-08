@@ -56,6 +56,6 @@ class ForecastDisplay implements ObserverInterface, DisplayElementInterface
         } else if ($this->currentPressure < $this->lastPressure) {
             $message .= "Watch out for cooler, rainy weather";
         }
-        \Hfdp\Utils::outputWithBr($message);
+        echo $message . "<br />";
     }
 }
