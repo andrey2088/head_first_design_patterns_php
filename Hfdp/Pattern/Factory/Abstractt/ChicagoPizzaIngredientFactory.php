@@ -12,7 +12,7 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new ThickCrustDough();
     }
-    
+
     /**
      * Create sauce
      * @return SauceInterface
@@ -21,7 +21,7 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new PlumTomatoSauce();
     }
-    
+
     /**
      * Create cheese
      * @return CheeseInterface
@@ -30,10 +30,10 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new MozarellaCheese();
     }
-    
+
     /**
      * Create veggies
-     * @return array<VeggiesInterface>
+     * @return VeggiesInterface[]
      */
     public function createVeggies()
     {
@@ -42,10 +42,10 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
             new Spinach(),
             new EggPlant()
         );
-        
+
         return $veggies;
     }
-    
+
     /**
      * Create pepperoni
      * @return PepperoniInterface
@@ -54,7 +54,7 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new SlicedPepperoni();
     }
-    
+
     /**
      * Create clam
      * @return ClamInterface

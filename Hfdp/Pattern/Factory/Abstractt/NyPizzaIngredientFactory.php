@@ -12,7 +12,7 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new ThinCrustDough();
     }
-    
+
     /**
      * Create sauce
      * @return SauceInterface
@@ -21,7 +21,7 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new MarinaraSauce();
     }
-    
+
     /**
      * Create cheese
      * @return CheeseInterface
@@ -30,10 +30,10 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new ReggianoCheese();
     }
-    
+
     /**
      * Create veggies
-     * @return array<VeggiesInterface>
+     * @return VeggiesInterface[]
      */
     public function createVeggies()
     {
@@ -43,10 +43,10 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
             new Mushroom(),
             new RedPepper()
         );
-        
+
         return $veggies;
     }
-    
+
     /**
      * Create pepperoni
      * @return PepperoniInterface
@@ -55,7 +55,7 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
     {
         return new SlicedPepperoni();
     }
-    
+
     /**
      * Create clam
      * @return ClamInterface

@@ -8,42 +8,42 @@ abstract class AbstractPizza
      * @var string
      */
     public $name;
-    
+
     /**
      * @var DoughInterface
      */
     public $dough;
-    
+
     /**
      * @var SauceInterface
      */
     public $sauce;
-    
+
     /**
-     * @var array<VeggiesInterface>
+     * @var VeggiesInterface[]
      */
     public $veggies;
-    
+
     /**
      * @var CheeseInterface
      */
     public $cheese;
-    
+
     /**
      * @var PepperoniInterface
      */
     public $pepperoni;
-    
+
     /**
      * @var ClamsInterface
      */
     public $clam;
-    
+
     /**
      * Prepare
      */
     abstract public function prepare();
-    
+
     /**
      * Bake
      */
@@ -51,7 +51,7 @@ abstract class AbstractPizza
     {
         echo "Bake for 25 minutes at 350<br />";
     }
-    
+
     /**
      * Cut
      */
@@ -59,7 +59,7 @@ abstract class AbstractPizza
     {
         echo "Cutting the pizza into diagonal slices<br />";
     }
-    
+
     /**
      * Box
      */
@@ -67,7 +67,7 @@ abstract class AbstractPizza
     {
         echo "Place pizza in official PizzaStore box<br />";
     }
-    
+
     /**
      * Set name
      * @param string $name
@@ -76,7 +76,7 @@ abstract class AbstractPizza
     {
         $this->name = $name;
     }
-    
+
     /**
      * Returns name
      * @return string
@@ -85,7 +85,7 @@ abstract class AbstractPizza
     {
         return $this->name;
     }
-    
+
     /**
      * Magic method
      * @return string
@@ -118,7 +118,7 @@ abstract class AbstractPizza
         if ($this->pepperoni != null) {
                 $result .= "&emsp;&emsp;" . $this->pepperoni . "<br />";
         }
-        
+
         return $result;
     }
 }

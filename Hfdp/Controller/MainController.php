@@ -13,7 +13,8 @@ class MainController
         //$controller = new ObserverController();
         //$controller = new DecoratorController();
         //$controller = new FactoryController();
-        $controller = new SingletonController();
+        //$controller = new SingletonController();
+        $controller = new CommandController();
         $controller->main();
     }
 

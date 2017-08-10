@@ -5,30 +5,30 @@ namespace Hfdp\Pattern\Observer;
 class WeatherData implements SubjectInterface
 {
     /**
-     * @var boolean
+     * @var bool
      */
     private $changed = false;
-    
+
     /**
      * @var array
      */
     private $observers;
-    
+
     /**
      * @var float
      */
     private $temperature;
-    
+
     /**
      * @var float
      */
     private $humidity;
-    
+
     /**
      * @var float
      */
     private $pressure;
-    
+
     /**
      * Constructor
      */
@@ -36,7 +36,7 @@ class WeatherData implements SubjectInterface
     {
         $this->observers = array();
     }
-    
+
     /**
      * Set changed to false
      */
@@ -44,7 +44,7 @@ class WeatherData implements SubjectInterface
     {
         $this->changed = false;
     }
-    
+
     /**
      * Set changed to true
      */
@@ -52,7 +52,7 @@ class WeatherData implements SubjectInterface
     {
         $this->changed = true;
     }
-    
+
     /**
      * Returns changed value
      */
@@ -60,7 +60,7 @@ class WeatherData implements SubjectInterface
     {
         return $this->changed;
     }
-    
+
     /**
      * Register observer
      * @param ObserverInterface $o
@@ -69,7 +69,7 @@ class WeatherData implements SubjectInterface
     {
         $this->observers[] = $o;
     }
-    
+
     /**
      * Remove observer
      * @param ObserverInterface $o
@@ -82,7 +82,7 @@ class WeatherData implements SubjectInterface
             }
         }
     }
-    
+
     /**
      * Notify observers
      */
@@ -95,7 +95,7 @@ class WeatherData implements SubjectInterface
         }
         $this->clearChanged();
     }
-    
+
     /**
      * This function calls when measurements changed
      */
@@ -104,7 +104,7 @@ class WeatherData implements SubjectInterface
         $this->setChanged();
         $this->notifyObservers();
     }
-    
+
     /**
      * Test function.
      * @param float $temperature
@@ -118,7 +118,7 @@ class WeatherData implements SubjectInterface
         $this->pressure = $pressure;
         $this->measurementsChanged();
     }
-    
+
     /**
      * Returns temperature
      * @return float
@@ -127,7 +127,7 @@ class WeatherData implements SubjectInterface
     {
         return $this->temperature;
     }
-    
+
     /**
      * Returns humidity
      * @return float
@@ -136,7 +136,7 @@ class WeatherData implements SubjectInterface
     {
         return $this->humidity;
     }
-    
+
     /**
      * Returns pressure
      * @return float
