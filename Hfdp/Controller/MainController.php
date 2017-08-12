@@ -14,7 +14,8 @@ class MainController
         //$controller = new DecoratorController();
         //$controller = new FactoryController();
         //$controller = new SingletonController();
-        $controller = new CommandController();
+        //$controller = new CommandController();
+        $controller = new AdapterController();
         $controller->main();
     }
 
