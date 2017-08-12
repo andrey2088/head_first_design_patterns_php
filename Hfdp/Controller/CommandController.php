@@ -9,7 +9,7 @@ class CommandController
     /**
      * Main
      */
-    public function main()
+    public static function main()
     {
         echo "<b>Remote</b><br />";
 

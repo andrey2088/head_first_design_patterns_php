@@ -9,7 +9,7 @@ class StrategyController
     /**
      * Main
      */
-    public function main()
+    public static function main()
     {
         $mallard = new Strategy\MallardDuck();
         $mallard->performQuack();

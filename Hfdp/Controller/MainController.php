@@ -9,14 +9,13 @@ class MainController
      */
     public static function main()
     {
-        //$controller = new StrategyController();
-        //$controller = new ObserverController();
-        //$controller = new DecoratorController();
-        //$controller = new FactoryController();
-        //$controller = new SingletonController();
-        //$controller = new CommandController();
-        $controller = new AdapterController();
-        $controller->main();
+        AdapterController::main();
+        //CommandController::main();
+        //DecoratorController::main();
+        //FactoryController::main();
+        //ObserverController::main();
+        //SingletonController::main();
+        //StrategyController::main();
     }
 
 }

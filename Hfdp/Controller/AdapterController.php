@@ -9,7 +9,7 @@ class AdapterController
     /**
      * Main
      */
-    public function main()
+    public static function main()
     {
         $duck = new Adapter\MallardDuck();
         $turkey = new Adapter\WildTurkey();
@@ -20,13 +20,13 @@ class AdapterController
         $turkey->fly();
 
         echo "<br />The Duck says...<br />";
-        $this->testDuck($duck);
+        self::testDuck($duck);
 
         echo "<br />The TurkeyAdapter says...<br />";
-        $this->testDuck($turkeyAdapter);
+        self::testDuck($turkeyAdapter);
     }
 
-    public function testDuck(Adapter\DuckInterface $duck)
+    private static function testDuck(Adapter\DuckInterface $duck)
     {
         $duck->quack();
         $duck->fly();
