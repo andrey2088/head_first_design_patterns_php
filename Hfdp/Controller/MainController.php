@@ -9,10 +9,10 @@ class MainController
      */
     public static function main()
     {
-        //AdapterController::main();
+        AdapterController::main();
         //CommandController::main();
         //DecoratorController::main();
-        FacadeController::main();
+        //FacadeController::main();
         //FactoryController::main();
         //ObserverController::main();
         //SingletonController::main();

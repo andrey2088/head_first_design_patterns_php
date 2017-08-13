@@ -31,6 +31,8 @@ class DuckAdapter implements TurkeyInterface
      */
     public function fly()
     {
-        $this->duck->fly();
+        if (rand(0, 4)  == 0) {
+            $this->duck->fly();
+        }
     }
 }
