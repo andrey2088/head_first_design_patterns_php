@@ -9,7 +9,7 @@ class MainController
      */
     public static function main()
     {
-        AdapterController::main();
+        //AdapterController::main();
         //CommandController::main();
         //DecoratorController::main();
         //FacadeController::main();
@@ -17,6 +17,7 @@ class MainController
         //ObserverController::main();
         //SingletonController::main();
         //StrategyController::main();
+        TemplateMethodController::main();
     }
 
 }
