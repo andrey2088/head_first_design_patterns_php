@@ -17,7 +17,8 @@ class MainController
         //ObserverController::main();
         //SingletonController::main();
         //StrategyController::main();
-        TemplateMethodController::main();
+        //TemplateMethodController::main();
+        IteratorController::main();
     }
 
 }
