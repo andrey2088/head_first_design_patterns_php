@@ -18,7 +18,8 @@ class MainController
         //SingletonController::main();
         //StrategyController::main();
         //TemplateMethodController::main();
-        IteratorController::main();
+        //IteratorController::main();
+        CompositeController::main();
     }
 
 }
