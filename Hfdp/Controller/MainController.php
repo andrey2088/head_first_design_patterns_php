@@ -11,16 +11,16 @@ class MainController
     {
         //AdapterController::main();
         //CommandController::main();
+        //CompositeController::main();
         //DecoratorController::main();
         //FacadeController::main();
         //FactoryController::main();
+        //IteratorController::main();
         //ObserverController::main();
         //SingletonController::main();
-        //StrategyController::main();
+        //StateController::main();
+        StrategyController::main();
         //TemplateMethodController::main();
-        //IteratorController::main();
-        //CompositeController::main();
-        StateController::main();
     }
 
 }

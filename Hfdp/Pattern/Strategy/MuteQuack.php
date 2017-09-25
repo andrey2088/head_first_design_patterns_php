@@ -6,7 +6,6 @@ class MuteQuack implements QuackBehaviorInterface
 {
     public function quack()
     {
-        $message = "<< Silence >>";
-        \Hfdp\Utils::outputWithBr($message);
+        echo "<< Silence >><br />";
     }
 }

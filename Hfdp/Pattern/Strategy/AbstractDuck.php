@@ -2,48 +2,48 @@
 
 namespace Hfdp\Pattern\Strategy;
 
-class Duck
+abstract class AbstractDuck
 {
     /**
      * Fly interface
      * @var FlyBehaviorInterface;
      */
     protected $flyBehavior;
-    
+
     /**
      * Quack interface
      * @var QuackBehaviorInterface;
      */
     protected $quackBehavior;
-    
+
     /**
      * Constructor
      */
     public function __construct() {}
-    
+
     /**
      * Display
      */
-    public function display() {}
-    
+    abstract public function display();
+
     /**
      * Set fly behavior
      * @param FlyBehaviorInterface $fb
      */
-    protected function setFlyBehavior(FlyBehaviorInterface $fb)
+    public function setFlyBehavior(FlyBehaviorInterface $fb)
     {
         $this->flyBehavior = $fb;
     }
-    
+
     /**
      * Set quack behavior
      * @param QuackBehaviorInterface $qb
      */
-    protected function setQuackBehavior(QuackBehaviorInterface $qb)
+    public function setQuackBehavior(QuackBehaviorInterface $qb)
     {
         $this->quackBehavior = $qb;
     }
-    
+
     /**
      * Fly
      */
@@ -51,7 +51,7 @@ class Duck
     {
         $this->flyBehavior->fly();
     }
-    
+
     /**
      * Quack
      */
@@ -59,13 +59,12 @@ class Duck
     {
         $this->quackBehavior->quack();
     }
-    
+
     /**
      * Swim
      */
     public function swim()
     {
-        $message = "All ducks float, even decoys!";
-        \Hfdp\Utils::outputWithBr($message);
+        echo "All ducks float, even decoys!<br />";
     }
 }

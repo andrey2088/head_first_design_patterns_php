@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Strategy;
 
-class MallardDuck extends AbstractDuck
+class RedHeadDuck extends AbstractDuck
 {
     /**
      * Constructor
@@ -20,6 +20,6 @@ class MallardDuck extends AbstractDuck
      */
     public function display()
     {
-        echo "I'm a real Mallard duck<br />";
+        echo "I'm a real Red Headed duck<br />";
     }
 }

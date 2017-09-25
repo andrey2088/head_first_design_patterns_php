@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Strategy;
 
-class ModelDuck extends Duck
+class ModelDuck extends AbstractDuck
 {
     /**
      * Constructor
@@ -10,17 +10,16 @@ class ModelDuck extends Duck
     public function __construct()
     {
         parent::__construct();
-        
+
         $this->flyBehavior = new FlyNoWay();
         $this->quackBehavior = new Quack();
     }
-    
+
     /**
      * Display
      */
     public function display()
     {
-        $message = "I'm a model duck";
-        \Hfdp\Utils::outputWithBr($message);
+        echo "I'm a model duck<br />";
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Hfdp\Pattern\Strategy;
 
-class MallardDuck extends AbstractDuck
+class DecoyDuck extends AbstractDuck
 {
     /**
      * Constructor
@@ -11,8 +11,8 @@ class MallardDuck extends AbstractDuck
     {
         parent::__construct();
 
-        $this->flyBehavior = new FlyWithWings();
-        $this->quackBehavior = new Quack();
+        $this->flyBehavior = new FlyNoWay();
+        $this->quackBehavior = new MuteQuack();
     }
 
     /**
@@ -20,6 +20,6 @@ class MallardDuck extends AbstractDuck
      */
     public function display()
     {
-        echo "I'm a real Mallard duck<br />";
+        echo "I'm a duck Decoy<br />";
     }
 }

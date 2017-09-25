@@ -6,7 +6,6 @@ class Sqeck implements QuackBehaviorInterface
 {
     public function quack()
     {
-        $message = "Sqeck";
-        \Hfdp\Utils::outputWithBr($message);
+        echo "Sqeck<br />";
     }
 }
