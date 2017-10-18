@@ -10,6 +10,7 @@ class MainController
     public static function main()
     {
         //AdapterController::main();
+        CombiningController::main();
         //CommandController::main();
         //CompositeController::main();
         //DecoratorController::main();
@@ -19,7 +20,7 @@ class MainController
         //ObserverController::main();
         //SingletonController::main();
         //StateController::main();
-        StrategyController::main();
+        //StrategyController::main();
         //TemplateMethodController::main();
     }
 
