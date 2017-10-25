@@ -21,7 +21,7 @@ class GarageDoorUpCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         $this->garageDoor->up();
     }
@@ -29,5 +29,5 @@ class GarageDoorUpCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo() {}
+    public function undo(): void {}
 }

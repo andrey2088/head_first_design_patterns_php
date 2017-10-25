@@ -18,7 +18,7 @@ class DecoyDuck extends AbstractDuck
     /**
      * Display
      */
-    public function display()
+    public function display(): void
     {
         echo "I'm a duck Decoy<br />";
     }

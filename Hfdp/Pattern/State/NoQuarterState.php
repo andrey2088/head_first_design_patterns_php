@@ -21,7 +21,7 @@ class NoQuarterState implements StateInterface
     /**
      * Insert quarter
      */
-    public function insertQuarter()
+    public function insertQuarter(): void
     {
         echo "You inserted a quarter<br />";
         $this->gumballMachine->setState($this->gumballMachine->getHasQuarterState());
@@ -30,7 +30,7 @@ class NoQuarterState implements StateInterface
     /**
      * Eject quarter
      */
-    public function ejectQuarter()
+    public function ejectQuarter(): void
     {
         echo "You haven't inserted a quarter<br />";
     }
@@ -38,7 +38,7 @@ class NoQuarterState implements StateInterface
     /**
      * Turn crank
      */
-    public function turnCrank()
+    public function turnCrank(): void
     {
         echo "You turned but there's no quarter<br />";
     }
@@ -46,7 +46,7 @@ class NoQuarterState implements StateInterface
     /**
      * Dispense
      */
-    public function dispense()
+    public function dispense(): void
     {
         echo "You need to pay first<br />";
     }
@@ -54,7 +54,7 @@ class NoQuarterState implements StateInterface
     /**
      * Magic method
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "waiting for quarter";
     }

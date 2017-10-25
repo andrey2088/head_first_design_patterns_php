@@ -11,12 +11,12 @@ class DarkRoast extends AbstractBeverage
     {
         $this->description = "Dark Roast Coffee";
     }
-    
+
     /**
      * Returns cost of beverage
      * @return float
      */
-    public function cost()
+    public function cost(): float
     {
         return .99;
     }

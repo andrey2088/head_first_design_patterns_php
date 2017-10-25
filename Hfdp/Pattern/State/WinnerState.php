@@ -21,7 +21,7 @@ class WinnerState implements StateInterface
     /**
      * Insert quarter
      */
-    public function insertQuarter()
+    public function insertQuarter(): void
     {
         echo "Please wait, we're already giving you a gumball<br />";
     }
@@ -29,7 +29,7 @@ class WinnerState implements StateInterface
     /**
      * Eject quarter
      */
-    public function ejectQuarter()
+    public function ejectQuarter(): void
     {
         echo "Sorry, you already turned the crank<br />";
     }
@@ -37,7 +37,7 @@ class WinnerState implements StateInterface
     /**
      * Turn crank
      */
-    public function turnCrank()
+    public function turnCrank(): void
     {
         echo "Turning twice doesn't get you another gumball!<br />";
     }
@@ -45,7 +45,7 @@ class WinnerState implements StateInterface
     /**
      * Dispense
      */
-    public function dispense()
+    public function dispense(): void
     {
         echo "YOU'RE A WINNER! You get two gumballs for your quarter<br />";
         $this->gumballMachine->releaseBall();
@@ -66,7 +66,7 @@ class WinnerState implements StateInterface
     /**
      * Magic method
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "delivering a gumball";
     }

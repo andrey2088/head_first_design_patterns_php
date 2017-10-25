@@ -9,7 +9,7 @@ class StateController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $gumballMachine = new State\GumballMachine(5);
 

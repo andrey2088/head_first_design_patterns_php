@@ -8,7 +8,7 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create dough
      * @return DoughInterface
      */
-    public function createDough()
+    public function createDough(): DoughInterface
     {
         return new ThinCrustDough();
     }
@@ -17,7 +17,7 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create sauce
      * @return SauceInterface
      */
-    public function createSauce()
+    public function createSauce(): SauceInterface
     {
         return new MarinaraSauce();
     }
@@ -26,7 +26,7 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create cheese
      * @return CheeseInterface
      */
-    public function createCheese()
+    public function createCheese(): CheeseInterface
     {
         return new ReggianoCheese();
     }
@@ -35,7 +35,7 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create veggies
      * @return VeggiesInterface[]
      */
-    public function createVeggies()
+    public function createVeggies(): array
     {
         $veggies = array(
             new Garlic(),
@@ -51,16 +51,16 @@ class NyPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create pepperoni
      * @return PepperoniInterface
      */
-    public function createPepperoni()
+    public function createPepperoni(): PepperoniInterface
     {
         return new SlicedPepperoni();
     }
 
     /**
      * Create clam
-     * @return ClamInterface
+     * @return ClamsInterface
      */
-    public function createClam()
+    public function createClam(): ClamsInterface
     {
         return new FreshClams();
     }

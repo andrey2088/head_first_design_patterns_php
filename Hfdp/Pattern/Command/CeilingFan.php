@@ -4,10 +4,10 @@ namespace Hfdp\Pattern\Command;
 
 class CeilingFan
 {
-    const LEVEL_OFF = 0;
-    const LEVEL_LOW = 1;
-    const LEVEL_MEDIUM = 2;
-    const LEVEL_HIGH = 3;
+    public const LEVEL_OFF = 0;
+    public const LEVEL_LOW = 1;
+    public const LEVEL_MEDIUM = 2;
+    public const LEVEL_HIGH = 3;
 
     /**
      * @var string
@@ -25,12 +25,13 @@ class CeilingFan
     public function __construct(string $location)
     {
         $this->location = $location;
+        $this->speed = self::LEVEL_OFF;
     }
 
     /**
      * Turns the ceiling fan on to high
      */
-    public function high()
+    public function high(): void
     {
         $this->speed = self::LEVEL_HIGH;
         echo $this->location . " ceiling fan is on high<br />";
@@ -39,7 +40,7 @@ class CeilingFan
     /**
      * Turns the ceiling fan on to medium
      */
-    public function medium()
+    public function medium(): void
     {
         $this->speed = self::LEVEL_MEDIUM;
         echo $this->location . " ceiling fan is on medium<br />";
@@ -48,7 +49,7 @@ class CeilingFan
     /**
      * Turns the ceiling fan on to low
      */
-    public function low()
+    public function low(): void
     {
         $this->speed = self::LEVEL_LOW;
         echo $this->location . " ceiling fan is on low<br />";
@@ -57,7 +58,7 @@ class CeilingFan
     /**
      * Turns the ceiling fan off
      */
-    public function off()
+    public function off(): void
     {
         $this->speed = self::LEVEL_OFF;
         echo $this->location . " ceiling fan is off<br />";
@@ -67,7 +68,7 @@ class CeilingFan
      * Returns speed of the ceiling fan
      * @return int
      */
-    public function getSpeed()
+    public function getSpeed(): int
     {
         return $this->speed;
     }

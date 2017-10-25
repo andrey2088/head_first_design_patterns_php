@@ -11,12 +11,12 @@ class Decaf extends AbstractBeverage
     {
         $this->description = "Decaf Coffee";
     }
-    
+
     /**
      * Returns cost of beverage
      * @return float
      */
-    public function cost()
+    public function cost(): float
     {
         return 1.05;
     }

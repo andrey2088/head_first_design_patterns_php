@@ -18,7 +18,7 @@ class MallardDuck extends AbstractDuck
     /**
      * Display
      */
-    public function display()
+    public function display(): void
     {
         echo "I'm a real Mallard duck<br />";
     }

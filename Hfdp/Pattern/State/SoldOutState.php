@@ -21,7 +21,7 @@ class SoldOutState implements StateInterface
     /**
      * Insert quarter
      */
-    public function insertQuarter()
+    public function insertQuarter(): void
     {
         echo "You can't insert a quarter, the machine is sold out<br />";
     }
@@ -29,7 +29,7 @@ class SoldOutState implements StateInterface
     /**
      * Eject quarter
      */
-    public function ejectQuarter()
+    public function ejectQuarter(): void
     {
         echo "You can't eject, you haven't inserted a quarter yet<br />";
     }
@@ -37,7 +37,7 @@ class SoldOutState implements StateInterface
     /**
      * Turn crank
      */
-    public function turnCrank()
+    public function turnCrank(): void
     {
         echo "You turned, but there are no gumballs<br />";
     }
@@ -45,7 +45,7 @@ class SoldOutState implements StateInterface
     /**
      * Dispense
      */
-    public function dispense()
+    public function dispense(): void
     {
         echo "No gumball dispensed<br />";
     }
@@ -53,7 +53,7 @@ class SoldOutState implements StateInterface
     /**
      * Magic method
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "sold out";
     }

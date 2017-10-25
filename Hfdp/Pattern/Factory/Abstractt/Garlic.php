@@ -8,7 +8,7 @@ class Garlic implements VeggiesInterface
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "Garlic";
     }

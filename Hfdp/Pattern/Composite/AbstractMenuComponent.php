@@ -9,17 +9,17 @@ abstract class AbstractMenuComponent
      * @param AbstractMenuComponent $menuComponent
      * @throws \BadMethodCallException
      */
-    public function add(AbstractMenuComponent $menuComponent)
+    public function add(AbstractMenuComponent $menuComponent): void
     {
         throw new \BadMethodCallException();
     }
 
     /**
      * Remove
-     * @param AbstractMenuComponent $menuComponent
+     * @param int $i
      * @throws \BadMethodCallException
      */
-    public function remove(AbstractMenuComponent $menuComponent)
+    public function remove(int $i): void
     {
         throw new \BadMethodCallException();
     }
@@ -28,6 +28,7 @@ abstract class AbstractMenuComponent
      * Get child
      * @param int $i
      * @throws \BadMethodCallException
+     * @return mixed
      */
     public function getChild(int $i)
     {
@@ -37,8 +38,9 @@ abstract class AbstractMenuComponent
     /**
      * Get name
      * @throws \BadMethodCallException
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         throw new \BadMethodCallException();
     }
@@ -46,8 +48,9 @@ abstract class AbstractMenuComponent
     /**
      * Get description
      * @throws \BadMethodCallException
+     * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         throw new \BadMethodCallException();
     }
@@ -55,8 +58,9 @@ abstract class AbstractMenuComponent
     /**
      * Get price
      * @throws \BadMethodCallException
+     * @return float
      */
-    public function getPrice()
+    public function getPrice(): float
     {
         throw new \BadMethodCallException();
     }
@@ -64,8 +68,9 @@ abstract class AbstractMenuComponent
     /**
      * Is vegetarian
      * @throws \BadMethodCallException
+     * @return bool
      */
-    public function isVegetarian()
+    public function isVegetarian(): bool
     {
         throw new \BadMethodCallException();
     }
@@ -74,7 +79,7 @@ abstract class AbstractMenuComponent
      * Print
      * @throws \BadMethodCallException
      */
-    public function printt()
+    public function printt(): void
     {
         throw new \BadMethodCallException();
     }

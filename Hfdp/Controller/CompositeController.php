@@ -9,7 +9,7 @@ class CompositeController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $pancakeHouseMenu = new Composite\Menu("PANCAKE HOUSE MENU", "Breakfast");
 		$dinerMenu = new Composite\Menu("DINER MENU", "Lunch");

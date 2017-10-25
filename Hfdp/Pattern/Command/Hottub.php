@@ -22,7 +22,7 @@ class Hottub
     /**
      * Turns hottub on
      */
-    public function on()
+    public function on(): void
     {
         $this->on = true;
     }
@@ -30,7 +30,7 @@ class Hottub
     /**
      * Turns hottub off
      */
-    public function off()
+    public function off(): void
     {
         $this->on = false;
     }
@@ -38,7 +38,7 @@ class Hottub
     /**
      * Circulate
      */
-    public function circulate()
+    public function circulate(): void
     {
         if ($this->on) {
             echo "Hottub is bubbling<br />";
@@ -48,7 +48,7 @@ class Hottub
     /**
      * Jets on
      */
-    public function jetsOn()
+    public function jetsOn(): void
     {
         if ($this->on) {
             echo "Hottub jets are on<br />";
@@ -58,7 +58,7 @@ class Hottub
     /**
      * Jets off
      */
-    public function JetsOff()
+    public function JetsOff(): void
     {
         if ($this->on) {
             echo "Hottub jets are off<br />";
@@ -68,7 +68,7 @@ class Hottub
     /**
      * Set temperature
      */
-    public function setTemperature(int $temperature)
+    public function setTemperature(int $temperature): void
     {
         if ($temperature > $this->temperature) {
             echo "Hottub is heating to a steaming " . $temperature . " degrees<br />";

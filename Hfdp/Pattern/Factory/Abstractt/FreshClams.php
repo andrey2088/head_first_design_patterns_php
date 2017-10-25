@@ -8,7 +8,7 @@ class FreshClams implements ClamsInterface
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "Fresh Clams from Long Island Sound";
     }

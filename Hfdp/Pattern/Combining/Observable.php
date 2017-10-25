@@ -29,7 +29,7 @@ class Observable implements QuackObservableInterface
      * Register observer
      * @param ObserverInterface $observer
      */
-    public function registerObserver(ObserverInterface $observer)
+    public function registerObserver(ObserverInterface $observer): void
     {
         $this->observers[] = $observer;
     }
@@ -37,7 +37,7 @@ class Observable implements QuackObservableInterface
     /**
      * Notify observers
      */
-    public function notifyObservers()
+    public function notifyObservers(): void
     {
         foreach($this->observers as $observer) {
             $observer->update($this->duck);

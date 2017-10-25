@@ -21,7 +21,7 @@ class StereoOffCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         $this->stereo->off();
     }
@@ -29,5 +29,5 @@ class StereoOffCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo() {}
+    public function undo(): void {}
 }

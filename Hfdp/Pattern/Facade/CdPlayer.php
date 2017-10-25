@@ -38,7 +38,7 @@ class CdPlayer
     /**
      * On
      */
-    public function on()
+    public function on(): void
     {
         echo $this->description . " on<br />";
     }
@@ -46,7 +46,7 @@ class CdPlayer
     /**
      * Off
      */
-    public function off()
+    public function off(): void
     {
         echo $this->description . " off<br />";
     }
@@ -54,7 +54,7 @@ class CdPlayer
     /**
      * Eject
      */
-    public function eject()
+    public function eject(): void
     {
         $this->title = null;
         echo $this->description . " eject<br />";
@@ -64,7 +64,7 @@ class CdPlayer
      * Play
      * @param int|string $trackOrTitle
      */
-    public function play($trackOrTitle)
+    public function play($trackOrTitle): void
     {
         if (is_int($trackOrTitle)) {
             if ($this->title == null) {
@@ -83,7 +83,7 @@ class CdPlayer
     /**
      * Stop
      */
-    public function stop()
+    public function stop(): void
     {
         $this->currentTrack = 0;
         echo $this->description . " stopped<br />";
@@ -92,7 +92,7 @@ class CdPlayer
     /**
      * Pause
      */
-    public function pause()
+    public function pause(): void
     {
         echo $this->description . " paused \"" . $this->title . "\"<br />";
     }
@@ -101,7 +101,7 @@ class CdPlayer
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->description;
     }

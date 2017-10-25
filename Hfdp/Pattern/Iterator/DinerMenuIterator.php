@@ -35,7 +35,7 @@ class DinerMenuIterator implements \Iterator
     /**
      * Move forward to next element
      */
-    public function next()
+    public function next(): void
     {
         $this->position += 1;
     }
@@ -44,7 +44,7 @@ class DinerMenuIterator implements \Iterator
      * Checks if current position is valid
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         if ($this->position >= count($this->list) || $this->list[$this->position] === null) {
 			return false;
@@ -56,7 +56,7 @@ class DinerMenuIterator implements \Iterator
     /**
      * Rewind
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->position = 0;
     }
@@ -65,7 +65,7 @@ class DinerMenuIterator implements \Iterator
      * Key
      * @return int
      */
-    public function key()
+    public function key(): int
     {
         return $this->position;
     }

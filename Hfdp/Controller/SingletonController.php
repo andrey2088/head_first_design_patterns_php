@@ -9,7 +9,7 @@ class SingletonController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $singleton = Singleton\Singleton::getInstance();
     }

@@ -9,7 +9,7 @@ class ChicagoPizzaStore extends AbstractPizzaStore
      * @param string $item
      * @return AbstractPizza
      */
-    public function createPizza($item)
+    public function createPizza($item): AbstractPizza
     {
         if (strcmp($item, "cheese") === 0) {
             return new ChicagoStyleCheesePizza();

@@ -7,7 +7,7 @@ abstract class AbstractCaffeineBeverage
     /**
      * Prepare recipe
      */
-    final public function prepareRecipe()
+    final public function prepareRecipe(): void
     {
         $this->boliWater();
         $this->brew();
@@ -20,17 +20,17 @@ abstract class AbstractCaffeineBeverage
     /**
      * Brew
      */
-    abstract public function brew();
+    abstract public function brew(): void;
 
     /**
      * Add condiments
      */
-    abstract public function addCondiments();
+    abstract public function addCondiments(): void;
 
     /**
      * Boil water
      */
-    final public function boliWater()
+    final public function boliWater(): void
     {
         echo "Boiling water<br />";
     }
@@ -38,16 +38,16 @@ abstract class AbstractCaffeineBeverage
     /**
      * Pour in cup
      */
-    final public function pourInCup()
+    final public function pourInCup(): void
     {
         echo "Pouring into cup<br />";
     }
 
     /**
-     *
+     * Is customer wants condiments?
      * @return bool
      */
-    public function customerWantsCondiments()
+    public function customerWantsCondiments(): bool
     {
         return true;
     }

@@ -35,7 +35,7 @@ class Waitress
     /**
      * Print menu
      */
-    public function printMenu()
+    public function printMenu(): void
     {
         $pancakeIterator = $this->pancakeHouseMenu->createIterator();
         $dinerIterator = $this->dinerMenu->createIterator();
@@ -53,7 +53,7 @@ class Waitress
      * Print menu part
      * @param \Iterator $iterator
      */
-    private function printMenuPart(\Iterator $iterator)
+    private function printMenuPart(\Iterator $iterator): void
     {
         while ($iterator->valid()) {
             $menuItem = $iterator->current();
@@ -67,7 +67,7 @@ class Waitress
     /**
      * Print vegetarian menu
      */
-    public function printVegetarianMenu()
+    public function printVegetarianMenu(): void
     {
         echo "<br /><br />VEGETARIAN MENU<br />---------------<br />";
         $this->printVegetarianMenuPart($this->pancakeHouseMenu->createIterator());
@@ -80,7 +80,7 @@ class Waitress
      * @param string $name
      * @return bool
      */
-    public function isItemVegetarian(string $name)
+    public function isItemVegetarian(string $name): bool
     {
         $pancakeIterator = $this->pancakeHouseMenu->createIterator();
 		if ($this->isVegetarian($name, $pancakeIterator)) {
@@ -101,7 +101,8 @@ class Waitress
      * Print vegetarian menu part
      * @param \Iterator $iterator
      */
-    private function printVegetarianMenuPart(\Iterator $iterator) {
+    private function printVegetarianMenuPart(\Iterator $iterator): void
+    {
 		while ($iterator->valid()) {
 			$menuItem = $iterator->current();
             $iterator->next();
@@ -119,7 +120,8 @@ class Waitress
      * @param \Iterator $iterator
      * @return bool
      */
-    private function isVegetarian(string $name, \Iterator $iterator) {
+    private function isVegetarian(string $name, \Iterator $iterator): bool
+    {
 		while ($iterator->valid()) {
 			$menuItem = $iterator->current();
             $iterator->next();

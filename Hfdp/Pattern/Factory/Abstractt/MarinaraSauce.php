@@ -8,7 +8,7 @@ class MarinaraSauce implements SauceInterface
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "Marinara Sauce";
     }

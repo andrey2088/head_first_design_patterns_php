@@ -5,7 +5,7 @@ namespace Hfdp\Pattern\Iterator;
 interface MenuInterface
 {
     /**
-     * @return Iterator
+     * @return \Iterator
      */
-    public function createIterator();
+    public function createIterator(): \Iterator;
 }

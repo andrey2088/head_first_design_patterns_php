@@ -21,7 +21,7 @@ class HasQuarterState implements StateInterface
     /**
      * Insert quarter
      */
-    public function insertQuarter()
+    public function insertQuarter(): void
     {
         echo "You can't insert another quarter<br />";
     }
@@ -29,7 +29,7 @@ class HasQuarterState implements StateInterface
     /**
      * Eject quarter
      */
-    public function ejectQuarter()
+    public function ejectQuarter(): void
     {
         $this->gumballMachine->setState($this->gumballMachine->getNoQuarterState());
         echo "Quarter returned<br />";
@@ -38,7 +38,7 @@ class HasQuarterState implements StateInterface
     /**
      * Turn crank
      */
-    public function turnCrank()
+    public function turnCrank(): void
     {
         echo "You turned...<br />";
         if ((rand(0, 9) == 0) && $this->gumballMachine->getCount() > 1) {
@@ -51,7 +51,7 @@ class HasQuarterState implements StateInterface
     /**
      * Dispense
      */
-    public function dispense()
+    public function dispense(): void
     {
         echo "No gumball dispensed<br />";
     }
@@ -59,7 +59,7 @@ class HasQuarterState implements StateInterface
     /**
      * Magic method
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "waiting for turn of crank";
     }

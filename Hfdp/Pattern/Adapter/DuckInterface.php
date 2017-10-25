@@ -7,10 +7,10 @@ interface DuckInterface
     /**
      * Quack
      */
-    public function quack();
+    public function quack(): void;
 
     /**
      * Fly
      */
-    public function fly();
+    public function fly(): void;
 }

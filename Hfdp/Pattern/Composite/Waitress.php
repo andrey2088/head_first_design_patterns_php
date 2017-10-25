@@ -21,7 +21,7 @@ class Waitress
     /**
      * Print menu
      */
-    public function printMenu()
+    public function printMenu(): void
     {
         $this->allMenus->printt();
     }
@@ -29,7 +29,7 @@ class Waitress
     /**
      * Print vegetarian menu
      */
-    public function printVegetarianMenu()
+    public function printVegetarianMenu(): void
     {
         $iterator = $this->allMenus->createIterator();
 

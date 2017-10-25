@@ -8,7 +8,7 @@ class MozarellaCheese implements CheeseInterface
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "Shredded Mozzarella";
     }

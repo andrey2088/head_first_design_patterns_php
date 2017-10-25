@@ -12,14 +12,14 @@ class ChicagoStyleCheesePizza extends AbstractPizza
         $this->name = "Chicago Style Deep Dish Cheese Pizza";
         $this->dough = "Extra Thick Crust Dough";
         $this->sauce = "Plum Tomato Sauce";
-        
+
         $this->toppings[] = "Shredded Mozzarella Cheese";
     }
-    
+
     /**
      * Cut
      */
-    public function cut()
+    public function cut(): void
     {
         echo "Cutting the pizza into square slices<br />";
     }

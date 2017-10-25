@@ -4,7 +4,10 @@ namespace Hfdp\Pattern\Strategy;
 
 class FlyWithWings implements FlyBehaviorInterface
 {
-    public function fly()
+    /**
+     * Fly
+     */
+    public function fly(): void
     {
         echo "I'm flying!<br />";
     }

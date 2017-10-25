@@ -8,36 +8,36 @@ interface PizzaIngredientFactoryInterface
      * Create dough
      * @return DoughInterface
      */
-    public function createDough();
+    public function createDough(): DoughInterface;
 
     /**
      * Create sauce
      * @return SauceInterface
      */
-    public function createSauce();
+    public function createSauce(): SauceInterface;
 
     /**
      * Create cheese
      * @return CheeseInterface
      */
-    public function createCheese();
+    public function createCheese(): CheeseInterface;
 
     /**
      * Create veggies
      * @return VeggiesInterface[]
      */
-    public function createVeggies();
+    public function createVeggies(): array;
 
     /**
      * Create pepperoni
      * @return PepperoniInterface
      */
-    public function createPepperoni();
+    public function createPepperoni(): PepperoniInterface;
 
     /**
      * Create clam
-     * @return ClamInterface
+     * @return ClamsInterface
      */
-    public function createClam();
+    public function createClam(): ClamsInterface;
 }
 

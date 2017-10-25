@@ -20,7 +20,7 @@ class Light
     /**
      * Turn on light
      */
-    public function on()
+    public function on(): void
     {
         echo $this->location . " light is on<br />";
     }
@@ -28,7 +28,7 @@ class Light
     /**
      * Turn off light
      */
-    public function off()
+    public function off(): void
     {
         echo $this->location . " light is off<br />";
     }

@@ -21,7 +21,7 @@ class StereoOnWithCdCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         $this->stereo->on();
         $this->stereo->setCD();
@@ -31,5 +31,5 @@ class StereoOnWithCdCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo() {}
+    public function undo(): void {}
 }

@@ -9,7 +9,7 @@ class TemplateMethodController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $tea = new TemplateMethod\Tea();
 		$coffee = new TemplateMethod\Coffee();

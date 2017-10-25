@@ -42,12 +42,12 @@ abstract class AbstractPizza
     /**
      * Prepare
      */
-    abstract public function prepare();
+    abstract public function prepare(): void;
 
     /**
      * Bake
      */
-    public function bake()
+    public function bake(): void
     {
         echo "Bake for 25 minutes at 350<br />";
     }
@@ -55,7 +55,7 @@ abstract class AbstractPizza
     /**
      * Cut
      */
-    public function cut()
+    public function cut(): void
     {
         echo "Cutting the pizza into diagonal slices<br />";
     }
@@ -63,7 +63,7 @@ abstract class AbstractPizza
     /**
      * Box
      */
-    public function box()
+    public function box(): void
     {
         echo "Place pizza in official PizzaStore box<br />";
     }
@@ -72,7 +72,7 @@ abstract class AbstractPizza
      * Set name
      * @param string $name
      */
-    public function setName($name)
+    public function setName($name): void
     {
         $this->name = $name;
     }
@@ -81,7 +81,7 @@ abstract class AbstractPizza
      * Returns name
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -90,7 +90,7 @@ abstract class AbstractPizza
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         $result = "---- " . $this->name . " ----<br />";
         if ($this->dough != null) {

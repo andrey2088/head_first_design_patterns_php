@@ -7,10 +7,10 @@ interface TurkeyInterface
     /**
      * Gobble
      */
-    public function gobble();
+    public function gobble(): void;
 
     /**
      * Fly
      */
-    public function fly();
+    public function fly(): void;
 }

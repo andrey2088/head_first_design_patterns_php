@@ -28,7 +28,7 @@ class Projector
     /**
      * On
      */
-    public function on()
+    public function on(): void
     {
         echo $this->description . " on<br />";
     }
@@ -36,7 +36,7 @@ class Projector
     /**
      * Off
      */
-    public function off()
+    public function off(): void
     {
         echo $this->description . " off<br />";
     }
@@ -44,7 +44,7 @@ class Projector
     /**
      * Widescreen mode
      */
-    public function wideScreenMode()
+    public function wideScreenMode(): void
     {
         echo $this->description . " in widescreen mode (16x9 aspect ratio)<br />";
     }
@@ -52,7 +52,7 @@ class Projector
     /**
      * TV mode
      */
-    public function tvMode()
+    public function tvMode(): void
     {
         $this->description . " in tv mode (4x3 aspect ratio)<br />";
     }
@@ -61,7 +61,7 @@ class Projector
      * Magic method
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         return $this->description;
     }

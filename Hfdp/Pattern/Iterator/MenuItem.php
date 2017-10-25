@@ -43,7 +43,7 @@ class MenuItem
      * Get name
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -52,7 +52,7 @@ class MenuItem
      * Get description
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -61,7 +61,7 @@ class MenuItem
      * Is vegetarian
      * @return bool
      */
-    public function isVegetarian()
+    public function isVegetarian(): bool
     {
         return $this->vegetarian;
     }
@@ -70,7 +70,7 @@ class MenuItem
      * Get price
      * @return float
      */
-    public function getPrice()
+    public function getPrice(): float
     {
         return $this->price;
     }

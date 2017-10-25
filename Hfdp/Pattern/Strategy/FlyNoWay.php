@@ -4,7 +4,10 @@ namespace Hfdp\Pattern\Strategy;
 
 class FlyNoWay implements FlyBehaviorInterface
 {
-    public function fly()
+    /**
+     * Fly
+     */
+    public function fly(): void
     {
         echo "I can't fly<br />";
     }

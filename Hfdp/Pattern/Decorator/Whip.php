@@ -3,12 +3,12 @@
 namespace Hfdp\Pattern\Decorator;
 
 class Whip extends AbstractCondimentDecorator
-{   
+{
     /**
      * @var AbstractBeverage
      */
     private $beverage;
-    
+
     /**
      * Constructor
      * @param AbstractBeverage $beverage
@@ -17,21 +17,21 @@ class Whip extends AbstractCondimentDecorator
     {
         $this->beverage = $beverage;
     }
-    
+
     /**
      * Description of beverage with condiments
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->beverage->getDescription() . ", Whip";
     }
-    
+
     /**
      * Cost of beverage with condiments
      * @return float
      */
-    public function cost()
+    public function cost(): float
     {
         return .10 + $this->beverage->cost();
     }

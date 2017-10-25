@@ -21,7 +21,7 @@ class TheaterLights
     /**
      * On
      */
-    public function on()
+    public function on(): void
     {
         echo $this->description . " on<br />";
     }
@@ -29,7 +29,7 @@ class TheaterLights
     /**
      * Off
      */
-    public function off()
+    public function off(): void
     {
         echo $this->description . " off<br />";
     }
@@ -38,7 +38,7 @@ class TheaterLights
      * Pop
      * @param int $level
      */
-    public function dim(int $level)
+    public function dim(int $level): void
     {
         echo $this->description . " diming to " . $level . "%<br />";
     }
@@ -47,7 +47,7 @@ class TheaterLights
      * Magic method
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         return $this->description;
     }

@@ -4,7 +4,7 @@ namespace Hfdp\Pattern\Iterator;
 
 class DinerMenu implements MenuInterface
 {
-    const MAX_ITEMS = 6;
+    private const MAX_ITEMS = 6;
 
     /**
      * @var MenuItem[]
@@ -33,7 +33,7 @@ class DinerMenu implements MenuInterface
      * @param bool $vegetarian
      * @param float $price
      */
-    public function addItem(string $name, string $description, bool $vegetarian, float $price)
+    public function addItem(string $name, string $description, bool $vegetarian, float $price): void
     {
         if (count($this->menuItems) >= self::MAX_ITEMS) {
             echo "Sorry, menu is full!  Can't add item to menu<br />";
@@ -47,7 +47,7 @@ class DinerMenu implements MenuInterface
      * Get menu items
      * @return MenuItem[]
      */
-    public function getMenuItems()
+    public function getMenuItems(): array
     {
         return $this->menuItems;
     }
@@ -56,7 +56,7 @@ class DinerMenu implements MenuInterface
      * Create iterator
      * @return DinerMenuIterator
      */
-    public function createIterator()
+    public function createIterator(): \Iterator
     {
         return new DinerMenuIterator($this->menuItems);
     }

@@ -9,11 +9,11 @@ class ChicagoPizzaStore extends AbstractPizzaStore
      * @param string $item
      * @return AbstractPizza
      */
-    protected function createPizza($item)
+    protected function createPizza($item): AbstractPizza
     {
         $pizza = null;
         $ingredientFactory = new ChicagoPizzaIngredientFactory();
-        
+
         if (strcmp($item, "cheese") === 0) {
             $pizza = new CheesePizza($ingredientFactory);
             $pizza->setName("Chicago Style Cheese Pizza");
@@ -27,7 +27,7 @@ class ChicagoPizzaStore extends AbstractPizzaStore
             $pizza = new VeggiePizza($ingredientFactory);
             $pizza->setName("Chicago Style Veggie Pizza");
         }
-        
+
         return $pizza;
     }
 }

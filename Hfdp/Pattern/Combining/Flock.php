@@ -13,7 +13,7 @@ class Flock implements QuackableInterface
      * Add
      * @param QuackableInterface $quacker
      */
-    public function add(QuackableInterface $quacker)
+    public function add(QuackableInterface $quacker): void
     {
         $this->quackers[] = $quacker;
         $this->observable = new Observable($this);
@@ -22,7 +22,7 @@ class Flock implements QuackableInterface
     /**
      * Quack
      */
-    public function quack()
+    public function quack(): void
     {
         foreach ($this->quackers as $quacker) {
             $quacker->quack();
@@ -34,7 +34,7 @@ class Flock implements QuackableInterface
      * Register observer
      * @param ObserverInterface $observer
      */
-    public function registerObserver(ObserverInterface $observer)
+    public function registerObserver(ObserverInterface $observer): void
     {
         foreach ($this->quackers as $quacker) {
             $quacker->registerObserver($observer);
@@ -44,13 +44,13 @@ class Flock implements QuackableInterface
     /**
      * Notify observers
      */
-    public function notifyObservers() {}
+    public function notifyObservers(): void {}
 
     /**
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "Flock of Ducks";
     }

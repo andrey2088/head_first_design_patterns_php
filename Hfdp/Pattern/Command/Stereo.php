@@ -20,7 +20,7 @@ class Stereo
     /**
      * Turn on stereo
      */
-    public function on()
+    public function on(): void
     {
         echo $this->location . " stereo is on<br />";
     }
@@ -28,7 +28,7 @@ class Stereo
     /**
      * Turn off stereo
      */
-    public function off()
+    public function off(): void
     {
         echo $this->location . " stereo is off<br />";
     }
@@ -36,7 +36,7 @@ class Stereo
     /**
      * Set CD
      */
-    public function setCD()
+    public function setCD(): void
     {
         echo $this->location . " stereo is set for CD input<br />";
     }
@@ -44,7 +44,7 @@ class Stereo
     /**
      * Set DVD
      */
-    public function setDVD()
+    public function setDVD(): void
     {
         echo $this->location . " stereo is set for DVD input<br />";
     }
@@ -52,7 +52,7 @@ class Stereo
     /**
      * Set radio
      */
-    public function setRadio()
+    public function setRadio(): void
     {
         echo $this->location . " stereo is set for Radio<br />";
     }
@@ -60,7 +60,7 @@ class Stereo
     /**
      * Set volume
      */
-    public function setVolume(int $volume)
+    public function setVolume(int $volume): void
     {
         echo $this->location . " stereo volume set to " . $volume . "<br />";
     }

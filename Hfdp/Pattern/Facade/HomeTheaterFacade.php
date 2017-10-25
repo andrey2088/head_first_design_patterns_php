@@ -72,7 +72,7 @@ class HomeTheaterFacade
      * Watch movie
      * @param string $movie
      */
-    public function wathcMovie(string $movie)
+    public function wathcMovie(string $movie): void
     {
         echo "Get ready to watch a movie...<br />";
         $this->popper->on();
@@ -92,7 +92,7 @@ class HomeTheaterFacade
     /**
      * End movie
      */
-    public function endMovie()
+    public function endMovie(): void
     {
         echo "Shutting movie theater down...<br />";
         $this->popper->off();

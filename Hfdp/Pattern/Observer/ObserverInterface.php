@@ -9,5 +9,5 @@ interface ObserverInterface
      * @param SubjectInterface $subj
      * @param mixed $arg
      */
-    public function update(SubjectInterface $subj, $arg);
+    public function update(SubjectInterface $subj, $arg): void;
 }

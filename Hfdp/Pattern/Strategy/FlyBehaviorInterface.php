@@ -4,5 +4,8 @@ namespace Hfdp\Pattern\Strategy;
 
 interface FlyBehaviorInterface
 {
-    public function fly();
+    /**
+     * Fly
+     */
+    public function fly(): void;
 }

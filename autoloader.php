@@ -2,10 +2,10 @@
 
 class Autoloader
 {
-    static public function loader($className)
+    static public function loader($className): bool
     {
         $filename = str_replace("\\", "/", $className) . ".php";
-        
+
         if (file_exists($filename)) {
             require_once($filename);
             return true;

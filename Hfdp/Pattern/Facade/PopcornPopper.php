@@ -21,7 +21,7 @@ class PopcornPopper
     /**
      * On
      */
-    public function on()
+    public function on(): void
     {
         echo $this->description . " on<br />";
     }
@@ -29,7 +29,7 @@ class PopcornPopper
     /**
      * Off
      */
-    public function off()
+    public function off(): void
     {
         echo $this->description . " off<br />";
     }
@@ -37,7 +37,7 @@ class PopcornPopper
     /**
      * Pop
      */
-    public function pop()
+    public function pop(): void
     {
         echo $this->description . " popping popcorn!<br />";
     }
@@ -46,7 +46,7 @@ class PopcornPopper
      * Magic method
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         return $this->description;
     }

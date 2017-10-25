@@ -9,7 +9,7 @@ class StrategyController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $mallard = new Strategy\MallardDuck();
         $rubberDuckie = new Strategy\RubberDuck();

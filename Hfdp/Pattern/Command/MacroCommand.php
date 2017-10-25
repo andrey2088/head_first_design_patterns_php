@@ -21,7 +21,7 @@ class MacroCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         foreach ($this->commands as $command) {
             $command->execute();
@@ -31,7 +31,7 @@ class MacroCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo()
+    public function undo(): void
     {
         foreach ($this->commands as $command) {
             $command->undo();

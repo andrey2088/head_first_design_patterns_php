@@ -43,7 +43,7 @@ class MenuItem extends AbstractMenuComponent
      * Get name
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -52,7 +52,7 @@ class MenuItem extends AbstractMenuComponent
      * Get description
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
@@ -61,7 +61,7 @@ class MenuItem extends AbstractMenuComponent
      * Is vegetarian
      * @return bool
      */
-    public function isVegetarian()
+    public function isVegetarian(): bool
     {
         return $this->vegetarian;
     }
@@ -70,7 +70,7 @@ class MenuItem extends AbstractMenuComponent
      * Get price
      * @return float
      */
-    public function getPrice()
+    public function getPrice(): float
     {
         return $this->price;
     }
@@ -78,7 +78,7 @@ class MenuItem extends AbstractMenuComponent
     /**
      * Print
      */
-	public function printt()
+	public function printt(): void
     {
 		echo "  " . $this->getName();
 		if ($this->isVegetarian()) {

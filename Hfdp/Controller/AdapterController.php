@@ -9,7 +9,7 @@ class AdapterController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $duck = new Adapter\MallardDuck();
         $turkey = new Adapter\WildTurkey();
@@ -33,7 +33,7 @@ class AdapterController
      * Test duck
      * @param DuckInterface $duck
      */
-    private static function testDuck(Adapter\DuckInterface $duck)
+    private static function testDuck(Adapter\DuckInterface $duck): void
     {
         $duck->quack();
         $duck->fly();
@@ -43,7 +43,7 @@ class AdapterController
      * Test turkey
      * @param TurkeyInterface $turkey
      */
-    private static function testTurkey(Adapter\TurkeyInterface $turkey)
+    private static function testTurkey(Adapter\TurkeyInterface $turkey): void
     {
         $turkey->gobble();
         $turkey->fly();

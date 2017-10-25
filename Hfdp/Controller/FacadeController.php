@@ -9,7 +9,7 @@ class FacadeController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $amp = new Facade\Amplifier("Top-O-Line Amplifier");
 		$tuner = new Facade\Tuner("Top-O-Line AM/FM Tuner", $amp);

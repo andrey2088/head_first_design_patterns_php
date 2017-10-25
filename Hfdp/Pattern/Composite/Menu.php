@@ -35,7 +35,7 @@ class Menu extends AbstractMenuComponent
      * Add
      * @param AbstractMenuComponent $menuComponent
      */
-    public function add(AbstractMenuComponent $menuComponent)
+    public function add(AbstractMenuComponent $menuComponent): void
     {
         $this->menuComponents->append($menuComponent);
     }
@@ -44,7 +44,7 @@ class Menu extends AbstractMenuComponent
      * Remove
      * @param int $i
      */
-    public function remove(int $i)
+    public function remove(int $i): void
     {
         $this->menuComponents->offsetUnset($i);
     }
@@ -52,6 +52,7 @@ class Menu extends AbstractMenuComponent
     /**
      * Get child
      * @param int $i
+     * @return mixed
      */
     public function getChild(int $i)
     {
@@ -62,7 +63,7 @@ class Menu extends AbstractMenuComponent
      * Get name
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
@@ -71,16 +72,16 @@ class Menu extends AbstractMenuComponent
      * Get description
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
 
     /**
      * Create Iterator
-     * @return Iterator
+     * @return \Iterator
      */
-    public function createIterator()
+    public function createIterator(): \Iterator
     {
         return new CompositeIterator($this->getMenuComponentsIterator());
 	}
@@ -88,7 +89,7 @@ class Menu extends AbstractMenuComponent
     /**
      * Print
      */
-	public function printt()
+	public function printt(): void
     {
 		echo "<br />" . $this->getName();
 		echo ", " . $this->getDescription() . "<br />";
@@ -102,7 +103,11 @@ class Menu extends AbstractMenuComponent
 		}
 	}
 
-    public function getMenuComponentsIterator()
+    /**
+     * Get menu components iterator
+     * @return \Iterator
+     */
+    public function getMenuComponentsIterator(): \Iterator
     {
         return $this->menuComponents->getIterator();
     }

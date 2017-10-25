@@ -9,7 +9,7 @@ class CombiningController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $duckFactory = new Combining\CountingDuckFactory();
         self::go($duckFactory);
@@ -18,7 +18,7 @@ class CombiningController
     /**
      * Go
      */
-    private static function go(Combining\AbstractDuckFactory $duckFactory)
+    private static function go(Combining\AbstractDuckFactory $duckFactory): void
     {
         $redheadDuck = $duckFactory->createRedheadDuck();
         $duckCall = $duckFactory->createDuckCall();
@@ -59,7 +59,7 @@ class CombiningController
      * Simulate
      * @param QuackableInterface $duck
      */
-    private static function simulate(Combining\QuackableInterface $duck)
+    private static function simulate(Combining\QuackableInterface $duck): void
     {
         $duck->quack();
     }

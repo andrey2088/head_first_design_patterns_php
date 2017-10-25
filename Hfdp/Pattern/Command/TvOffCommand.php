@@ -21,7 +21,7 @@ class TvOffCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         $this->tv->off();
     }
@@ -29,7 +29,7 @@ class TvOffCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo()
+    public function undo(): void
     {
         $this->tv->on();
     }

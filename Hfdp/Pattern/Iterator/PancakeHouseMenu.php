@@ -29,7 +29,7 @@ class PancakeHouseMenu implements MenuInterface
      * @param bool $vegetarian
      * @param float $price
      */
-    public function addItem(string $name, string $description, bool $vegetarian, float $price)
+    public function addItem(string $name, string $description, bool $vegetarian, float $price): void
     {
         $menuItem = new MenuItem($name, $description, $vegetarian, $price);
         $this->menuItems->append($menuItem);
@@ -39,16 +39,16 @@ class PancakeHouseMenu implements MenuInterface
      * Get menu items
      * @return \ArrayObject
      */
-    public function getMenuItems()
+    public function getMenuItems(): \ArrayObject
     {
         return $this->menuItems;
     }
 
     /**
      * Create iterator
-     * @return ArrayIterator
+     * @return \ArrayIterator
      */
-    public function createIterator()
+    public function createIterator(): \Iterator
     {
         return $this->menuItems->getIterator();
     }

@@ -4,7 +4,10 @@ namespace Hfdp\Pattern\Combining;
 
 class Goose
 {
-    public function honk()
+    /**
+     * Honk
+     */
+    public function honk(): void
     {
         echo "Honk<br />";
     }

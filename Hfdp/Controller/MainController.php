@@ -7,7 +7,7 @@ class MainController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         //AdapterController::main();
         CombiningController::main();

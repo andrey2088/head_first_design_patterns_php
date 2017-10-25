@@ -4,5 +4,8 @@ namespace Hfdp\Pattern\Strategy;
 
 interface QuackBehaviorInterface
 {
-    public function quack();
+    /**
+     * Quack
+     */
+    public function quack(): void;
 }

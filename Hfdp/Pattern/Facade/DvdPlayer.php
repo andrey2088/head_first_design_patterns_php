@@ -38,7 +38,7 @@ class DvdPlayer
     /**
      * On
      */
-    public function on()
+    public function on(): void
     {
         echo $this->description . " on<br />";
     }
@@ -46,7 +46,7 @@ class DvdPlayer
     /**
      * Off
      */
-    public function off()
+    public function off(): void
     {
         echo $this->description . " off<br />";
     }
@@ -54,7 +54,7 @@ class DvdPlayer
     /**
      * Eject
      */
-    public function eject()
+    public function eject(): void
     {
         $this->movie = null;
         echo $this->description . " eject<br />";
@@ -64,7 +64,7 @@ class DvdPlayer
      * Play
      * @param int|string $trackOrMovie
      */
-    public function play($trackOrMovie)
+    public function play($trackOrMovie): void
     {
         if (is_int($trackOrMovie)) {
             if ($this->movie == null) {
@@ -84,7 +84,7 @@ class DvdPlayer
     /**
      * Stop
      */
-    public function stop()
+    public function stop(): void
     {
         $this->currentTrack = 0;
         echo $this->description . " stopped \"" . $this->movie . "\"<br />";
@@ -93,7 +93,7 @@ class DvdPlayer
     /**
      * Pause
      */
-    public function pause()
+    public function pause(): void
     {
         echo $this->description . " paused \"" . $this->movie . "\"<br />";
     }
@@ -101,7 +101,7 @@ class DvdPlayer
     /**
      * Set two channel audio
      */
-    public function setTwoChannelAudio()
+    public function setTwoChannelAudio(): void
     {
         echo $this->description . " set two channel audio<br />";
     }
@@ -109,7 +109,7 @@ class DvdPlayer
     /**
      * Set surround audio
      */
-    public function setSurroundAudio()
+    public function setSurroundAudio(): void
     {
         echo $this->description + " set surround audio<br />";
     }
@@ -118,7 +118,7 @@ class DvdPlayer
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->description;
     }

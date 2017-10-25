@@ -7,10 +7,10 @@ class NoCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute() {}
+    public function execute(): void {}
 
     /**
      * Undo
      */
-    public function undo() {}
+    public function undo(): void {}
 }

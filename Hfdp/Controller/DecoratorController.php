@@ -9,7 +9,7 @@ class DecoratorController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $beverage = new Decorator\Espresso();
         echo $beverage->getDescription() . " $" . $beverage->cost() . "<br />";

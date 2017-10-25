@@ -8,5 +8,5 @@ interface ObserverInterface
      * Update
      * @param QuackObservableInterface $duck
      */
-    public function update(QuackObservableInterface $duck);
+    public function update(QuackObservableInterface $duck): void;
 }

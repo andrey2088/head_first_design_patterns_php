@@ -18,7 +18,7 @@ class RubberDuck extends AbstractDuck
     /**
      * Display
      */
-    public function display()
+    public function display(): void
     {
         echo "I'm a rubber duckie<br />";
     }

@@ -20,7 +20,7 @@ class GarageDoor
     /**
      * Open garage door
      */
-    public function up()
+    public function up(): void
     {
         echo $this->location . " garage door is Open<br />";
     }
@@ -28,7 +28,7 @@ class GarageDoor
     /**
      * Close garage door
      */
-    public function down()
+    public function down(): void
     {
         echo $this->location . " garage door is Closed<br />";
     }
@@ -36,7 +36,7 @@ class GarageDoor
     /**
      * Stop garage door
      */
-    public function stop()
+    public function stop(): void
     {
         echo $this->location . " garage door is Stopped<br />";
     }
@@ -44,7 +44,7 @@ class GarageDoor
     /**
      * Turn on garage light
      */
-    public function lightOn()
+    public function lightOn(): void
     {
         echo $this->location . " garage light is on<br />";
     }
@@ -52,7 +52,7 @@ class GarageDoor
     /**
      * Turn off garage light
      */
-    public function lightOff()
+    public function lightOff(): void
     {
         echo $this->location . " garage light is off<br />";
     }

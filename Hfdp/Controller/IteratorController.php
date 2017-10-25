@@ -9,7 +9,7 @@ class IteratorController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $pancakeHouseMenu = new Iterator\PancakeHouseMenu();
         $dinerManu = new Iterator\DinerMenu();

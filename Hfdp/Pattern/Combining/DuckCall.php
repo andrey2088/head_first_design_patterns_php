@@ -20,7 +20,7 @@ class DuckCall implements QuackableInterface
     /**
      * Quack
      */
-    public function quack()
+    public function quack(): void
     {
         echo "Kwak<br />";
         $this->notifyObservers();
@@ -30,7 +30,7 @@ class DuckCall implements QuackableInterface
      * Register observer
      * @param ObserverInterface $observer
      */
-    public function registerObserver(ObserverInterface $observer)
+    public function registerObserver(ObserverInterface $observer): void
     {
         $this->observable->registerObserver($observer);
     }
@@ -38,7 +38,7 @@ class DuckCall implements QuackableInterface
     /**
      * Notify observers
      */
-    public function notifyObservers()
+    public function notifyObservers(): void
     {
         $this->observable->notifyObservers();
     }
@@ -47,7 +47,7 @@ class DuckCall implements QuackableInterface
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "Duck Call";
     }

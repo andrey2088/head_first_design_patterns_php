@@ -8,7 +8,7 @@ class PizzaStore
      * @var SimplePizzaFactory
      */
     private $factory;
-    
+
     /**
      * Constructor
      * @param SimplePizzaFactory $factory
@@ -17,21 +17,21 @@ class PizzaStore
     {
         $this->factory = $factory;
     }
-    
+
     /**
      * Order pizza
      * @param string $type
      * @return AbstractPizza
      */
-    public function orderPizza($type)
+    public function orderPizza($type): AbstractPizza
     {
         $pizza = $this->factory->createPizza($type);
-        
+
         $pizza->prepare();
         $pizza->bake();
         $pizza->cut();
         $pizza->box();
-        
+
         return $pizza;
     }
 }

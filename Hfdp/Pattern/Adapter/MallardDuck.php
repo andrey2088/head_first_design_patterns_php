@@ -7,7 +7,7 @@ class MallardDuck implements DuckInterface
     /**
      * Quack
      */
-    public function quack()
+    public function quack(): void
     {
         echo "Quack<br />";
     }
@@ -15,7 +15,7 @@ class MallardDuck implements DuckInterface
     /**
      * Fly
      */
-    public function fly()
+    public function fly(): void
     {
         echo "I'm flying<br />";
     }

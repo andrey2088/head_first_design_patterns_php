@@ -8,17 +8,17 @@ class CurrentConditionsDisplay implements ObserverInterface, DisplayElementInter
      * @var float
      */
     private $temperature;
-    
+
     /**
      * @var float
      */
     private $humidity;
-    
+
     /**
      * @var WeatherData
      */
     private $weatherData;
-    
+
     /**
      * Constructor
      * @param SubjectInterface $weatherData
@@ -28,13 +28,13 @@ class CurrentConditionsDisplay implements ObserverInterface, DisplayElementInter
         $this->weatherData = $weatherData;
         $this->weatherData->registerObserver($this);
     }
-    
+
     /**
      * Update
      * @param SubjectInterface $subj
      * @param mixed $arg
      */
-    public function update(SubjectInterface $subj, $arg = null)
+    public function update(SubjectInterface $subj, $arg = null): void
     {
         if ($subj instanceof WeatherData) {
             $this->temperature = $subj->getTemperature();
@@ -42,13 +42,13 @@ class CurrentConditionsDisplay implements ObserverInterface, DisplayElementInter
             $this->display();
         }
     }
-    
+
     /**
      * Display
      */
-    public function display()
+    public function display(): void
     {
-        echo "Current conditions: " . number_format($this->temperature, 1) . "F degrees and " 
+        echo "Current conditions: " . number_format($this->temperature, 1) . "F degrees and "
             . number_format($this->humidity, 1) . "% humidity" . "<br />";
     }
 }

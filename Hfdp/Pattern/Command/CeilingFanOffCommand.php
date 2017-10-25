@@ -26,7 +26,7 @@ class CeilingFanOffCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         $this->prevSpeed = $this->ceilingFan->getSpeed();
         $this->ceilingFan->off();
@@ -35,7 +35,7 @@ class CeilingFanOffCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo()
+    public function undo(): void
     {
         if ($this->prevSpeed == CeilingFan::LEVEL_HIGH) {
             $this->ceilingFan->high();

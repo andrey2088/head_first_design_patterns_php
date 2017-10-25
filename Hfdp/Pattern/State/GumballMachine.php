@@ -62,7 +62,7 @@ class GumballMachine
     /**
      * Insert quarter
      */
-    public function insertQuarter()
+    public function insertQuarter(): void
     {
         $this->state->insertQuarter();
     }
@@ -70,7 +70,7 @@ class GumballMachine
     /**
      * Eject quarter
      */
-    public function ejectQuarter()
+    public function ejectQuarter(): void
     {
         $this->state->ejectQuarter();
     }
@@ -78,7 +78,7 @@ class GumballMachine
     /**
      * Turn crank
      */
-    public function turnCrank()
+    public function turnCrank(): void
     {
         $this->state->turnCrank();
         $this->state->dispense();
@@ -88,7 +88,7 @@ class GumballMachine
      * Set state
      * @param StateInterface $state
      */
-    public function setState(StateInterface $state)
+    public function setState(StateInterface $state): void
     {
         $this->state = $state;
     }
@@ -96,7 +96,7 @@ class GumballMachine
     /**
      * Release ball
      */
-    public function releaseBall()
+    public function releaseBall(): void
     {
         echo "A gumball comes rolling out the slot...<br />";
         if ($this->count != 0) {
@@ -108,7 +108,7 @@ class GumballMachine
      * Get count
      * @return int
      */
-    public function getCount()
+    public function getCount(): int
     {
         return $this->count;
     }
@@ -117,7 +117,7 @@ class GumballMachine
      * Get soldOutState
      * @return StateInterface
      */
-    public function getSoldOutState()
+    public function getSoldOutState(): StateInterface
     {
         return $this->soldOutState;
     }
@@ -126,7 +126,7 @@ class GumballMachine
      * Get noQuarterState
      * @return StateInterface
      */
-    public function getNoQuarterState()
+    public function getNoQuarterState(): StateInterface
     {
         return $this->noQuarterState;
     }
@@ -135,7 +135,7 @@ class GumballMachine
      * Get hasQuarterState
      * @return StateInterface
      */
-    public function getHasQuarterState()
+    public function getHasQuarterState(): StateInterface
     {
         return $this->hasQuarterState;
     }
@@ -144,7 +144,7 @@ class GumballMachine
      * Get soldState
      * @return StateInterface
      */
-    public function getSoldState()
+    public function getSoldState(): StateInterface
     {
         return $this->soldState;
     }
@@ -153,7 +153,7 @@ class GumballMachine
      * Get winnerState
      * @return StateInterface
      */
-    public function getWinnerState()
+    public function getWinnerState(): StateInterface
     {
         return $this->winnerState;
     }
@@ -162,7 +162,7 @@ class GumballMachine
      * Refill
      * @param int $numGumBalls
      */
-    public function refill(int $numGumBalls)
+    public function refill(int $numGumBalls): void
     {
 		$this->count = $numGumBalls;
 		$this->state = $this->noQuarterState;
@@ -172,7 +172,7 @@ class GumballMachine
      * Magic method
      * @return string
      */
-	public function __toString()
+	public function __toString(): string
     {
 		$result = "<br />Mighty Gumball, Inc.<br />";
 		$result .= "Java-enabled Standing Gumball Model #2004<br />";

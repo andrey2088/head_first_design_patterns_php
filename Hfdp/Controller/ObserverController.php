@@ -9,7 +9,7 @@ class ObserverController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         $weatherData = new Observer\WeatherData();
         $currentDisplay = new Observer\CurrentConditionsDisplay($weatherData);

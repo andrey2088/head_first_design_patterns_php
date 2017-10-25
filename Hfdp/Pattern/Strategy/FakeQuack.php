@@ -4,7 +4,10 @@ namespace Hfdp\Pattern\Strategy;
 
 class FakeQuack implements QuackBehaviorInterface
 {
-    public function quack()
+    /**
+     * Quack
+     */
+    public function quack(): void
     {
         echo "Qwak<br />";
     }

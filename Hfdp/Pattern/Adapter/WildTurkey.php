@@ -7,7 +7,7 @@ class WildTurkey implements TurkeyInterface
     /**
      * Gobble
      */
-    public function gobble()
+    public function gobble(): void
     {
         echo "Gobble gobble<br />";
     }
@@ -15,7 +15,7 @@ class WildTurkey implements TurkeyInterface
     /**
      * Fly
      */
-    public function fly()
+    public function fly(): void
     {
         echo "I'm flying a short distance<br />";
     }

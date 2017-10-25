@@ -18,7 +18,7 @@ class RedHeadDuck extends AbstractDuck
     /**
      * Display
      */
-    public function display()
+    public function display(): void
     {
         echo "I'm a real Red Headed duck<br />";
     }

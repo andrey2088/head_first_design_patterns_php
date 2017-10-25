@@ -11,7 +11,7 @@ class FactoryController
     /**
      * Main
      */
-    public static function main()
+    public static function main(): void
     {
         // simple factory
         echo "<b>Simple Factory</b><br /><br />";

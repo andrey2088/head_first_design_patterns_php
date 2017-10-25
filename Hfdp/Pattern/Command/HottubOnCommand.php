@@ -21,7 +21,7 @@ class HottubOnCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         $this->hottub->on();
         $this->hottub->setTemperature(104);
@@ -31,7 +31,7 @@ class HottubOnCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo()
+    public function undo(): void
     {
         $this->hottub->off();
     }

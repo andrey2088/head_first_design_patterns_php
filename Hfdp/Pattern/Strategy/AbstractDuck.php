@@ -24,13 +24,13 @@ abstract class AbstractDuck
     /**
      * Display
      */
-    abstract public function display();
+    abstract public function display(): void;
 
     /**
      * Set fly behavior
      * @param FlyBehaviorInterface $fb
      */
-    public function setFlyBehavior(FlyBehaviorInterface $fb)
+    public function setFlyBehavior(FlyBehaviorInterface $fb): void
     {
         $this->flyBehavior = $fb;
     }
@@ -39,7 +39,7 @@ abstract class AbstractDuck
      * Set quack behavior
      * @param QuackBehaviorInterface $qb
      */
-    public function setQuackBehavior(QuackBehaviorInterface $qb)
+    public function setQuackBehavior(QuackBehaviorInterface $qb): void
     {
         $this->quackBehavior = $qb;
     }
@@ -47,7 +47,7 @@ abstract class AbstractDuck
     /**
      * Fly
      */
-    public function performFly()
+    public function performFly(): void
     {
         $this->flyBehavior->fly();
     }
@@ -55,7 +55,7 @@ abstract class AbstractDuck
     /**
      * Quack
      */
-    public function performQuack()
+    public function performQuack(): void
     {
         $this->quackBehavior->quack();
     }
@@ -63,7 +63,7 @@ abstract class AbstractDuck
     /**
      * Swim
      */
-    public function swim()
+    public function swim(): void
     {
         echo "All ducks float, even decoys!<br />";
     }

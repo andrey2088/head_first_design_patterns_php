@@ -8,7 +8,7 @@ class PepperoniPizza extends AbstractPizza
      * @var PizzaIngredientFactory
      */
     private $ingredientFactory;
-    
+
     /**
      * Constructor
      * @param PizzaIngredientFactoryInterface $ingredientFactory
@@ -17,11 +17,11 @@ class PepperoniPizza extends AbstractPizza
     {
         $this->ingredientFactory = $ingredientFactory;
     }
-    
+
     /**
      * Prepare
      */
-    public function prepare()
+    public function prepare(): void
     {
         echo "Preparing " . $this->name . "<br />";
         $this->dough = $this->ingredientFactory->createDough();

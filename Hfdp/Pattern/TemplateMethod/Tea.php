@@ -7,7 +7,7 @@ class Tea extends AbstractCaffeineBeverage
     /**
      * Brew
      */
-    public function brew()
+    public function brew(): void
     {
         echo "Stepping the tea<br />";
     }
@@ -15,7 +15,7 @@ class Tea extends AbstractCaffeineBeverage
     /**
      * Add condiments
      */
-    public function addCondiments()
+    public function addCondiments(): void
     {
         echo "Adding lemon<br />";
     }
@@ -24,7 +24,7 @@ class Tea extends AbstractCaffeineBeverage
      * Customer wants condiments
      * @return bool
      */
-    public function customerWantsCondiments()
+    public function customerWantsCondiments(): bool
     {
 		$answer = $this->getUserInput();
 
@@ -39,7 +39,7 @@ class Tea extends AbstractCaffeineBeverage
      * Get user input
      * @return string
      */
-	private function getUserInput()
+	private function getUserInput(): string
     {
 		// get the user's response
 		$answer = null;

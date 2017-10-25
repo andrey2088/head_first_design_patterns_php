@@ -21,7 +21,7 @@ class HottubOffCommand implements CommandInterface
     /**
      * Execute command
      */
-    public function execute()
+    public function execute(): void
     {
         $this->hottub->setTemperature(98);
         $this->hottub->off();
@@ -30,7 +30,7 @@ class HottubOffCommand implements CommandInterface
     /**
      * Undo
      */
-    public function undo()
+    public function undo(): void
     {
         $this->hottub->on();
     }

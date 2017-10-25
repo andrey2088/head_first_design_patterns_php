@@ -7,5 +7,5 @@ interface DisplayElementInterface
     /**
      * Display
      */
-    public function display();
+    public function display(): void;
 }

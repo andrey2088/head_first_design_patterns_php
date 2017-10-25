@@ -8,7 +8,7 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create dough
      * @return DoughInterface
      */
-    public function createDough()
+    public function createDough(): DoughInterface
     {
         return new ThickCrustDough();
     }
@@ -17,7 +17,7 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create sauce
      * @return SauceInterface
      */
-    public function createSauce()
+    public function createSauce(): SauceInterface
     {
         return new PlumTomatoSauce();
     }
@@ -26,7 +26,7 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create cheese
      * @return CheeseInterface
      */
-    public function createCheese()
+    public function createCheese(): CheeseInterface
     {
         return new MozarellaCheese();
     }
@@ -35,7 +35,7 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create veggies
      * @return VeggiesInterface[]
      */
-    public function createVeggies()
+    public function createVeggies(): array
     {
         $veggies = array(
             new BlackOlives(),
@@ -50,16 +50,16 @@ class ChicagoPizzaIngredientFactory implements PizzaIngredientFactoryInterface
      * Create pepperoni
      * @return PepperoniInterface
      */
-    public function createPepperoni()
+    public function createPepperoni(): PepperoniInterface
     {
         return new SlicedPepperoni();
     }
 
     /**
      * Create clam
-     * @return ClamInterface
+     * @return ClamsInterface
      */
-    public function createClam()
+    public function createClam(): ClamsInterface
     {
         return new FrozenClams();
     }

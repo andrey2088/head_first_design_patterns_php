@@ -27,7 +27,7 @@ class GooseAdapter implements QuackableInterface
     /**
      * Quack
      */
-    public function quack()
+    public function quack(): void
     {
         $this->goose->honk();
         $this->notifyObservers();
@@ -37,7 +37,7 @@ class GooseAdapter implements QuackableInterface
      * Register observer
      * @param ObserverInterface $observer
      */
-    public function registerObserver(ObserverInterface $observer)
+    public function registerObserver(ObserverInterface $observer): void
     {
         $this->observable->registerObserver($observer);
     }
@@ -45,7 +45,7 @@ class GooseAdapter implements QuackableInterface
     /**
      * Notify observers
      */
-    public function notifyObservers()
+    public function notifyObservers(): void
     {
         $this->observable->notifyObservers();
     }
@@ -54,7 +54,7 @@ class GooseAdapter implements QuackableInterface
      * Magic method
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "Goose pretending to be a Duck";
     }

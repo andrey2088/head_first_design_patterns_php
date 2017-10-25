@@ -7,5 +7,5 @@ interface QuackableInterface extends QuackObservableInterface
     /**
      * Quack
      */
-    public function quack();
+    public function quack(): void;
 }

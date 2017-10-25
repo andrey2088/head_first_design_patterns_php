@@ -18,7 +18,7 @@ class ModelDuck extends AbstractDuck
     /**
      * Display
      */
-    public function display()
+    public function display(): void
     {
         echo "I'm a model duck<br />";
     }

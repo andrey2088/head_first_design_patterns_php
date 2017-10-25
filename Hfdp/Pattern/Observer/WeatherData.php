@@ -40,7 +40,7 @@ class WeatherData implements SubjectInterface
     /**
      * Set changed to false
      */
-    private function clearChanged()
+    private function clearChanged(): void
     {
         $this->changed = false;
     }
@@ -48,15 +48,16 @@ class WeatherData implements SubjectInterface
     /**
      * Set changed to true
      */
-    private function setChanged()
+    private function setChanged(): void
     {
         $this->changed = true;
     }
 
     /**
      * Returns changed value
+     * @return bool
      */
-    public function hasChanged()
+    public function hasChanged(): bool
     {
         return $this->changed;
     }
@@ -65,7 +66,7 @@ class WeatherData implements SubjectInterface
      * Register observer
      * @param ObserverInterface $o
      */
-    public function registerObserver(ObserverInterface $o)
+    public function registerObserver(ObserverInterface $o): void
     {
         $this->observers[] = $o;
     }
@@ -74,7 +75,7 @@ class WeatherData implements SubjectInterface
      * Remove observer
      * @param ObserverInterface $o
      */
-    public function removeObserver(ObserverInterface $o)
+    public function removeObserver(ObserverInterface $o): void
     {
         foreach ($this->observers as $i => $observer) {
             if ($observer === $o) {
@@ -86,7 +87,7 @@ class WeatherData implements SubjectInterface
     /**
      * Notify observers
      */
-    public function notifyObservers()
+    public function notifyObservers(): void
     {
         if ($this->hasChanged()) {
             foreach ($this->observers as $observer) {
@@ -99,7 +100,7 @@ class WeatherData implements SubjectInterface
     /**
      * This function calls when measurements changed
      */
-    private function measurementsChanged()
+    private function measurementsChanged(): void
     {
         $this->setChanged();
         $this->notifyObservers();
@@ -111,7 +112,7 @@ class WeatherData implements SubjectInterface
      * @param float $humidity
      * @param float $pressure
      */
-    public function setMeasurements(float $temperature, float $humidity, float $pressure)
+    public function setMeasurements(float $temperature, float $humidity, float $pressure): void
     {
         $this->temperature = $temperature;
         $this->humidity = $humidity;
@@ -123,7 +124,7 @@ class WeatherData implements SubjectInterface
      * Returns temperature
      * @return float
      */
-    public function getTemperature()
+    public function getTemperature(): float
     {
         return $this->temperature;
     }
@@ -132,7 +133,7 @@ class WeatherData implements SubjectInterface
      * Returns humidity
      * @return float
      */
-    public function getHumidity()
+    public function getHumidity(): float
     {
         return $this->humidity;
     }
@@ -141,7 +142,7 @@ class WeatherData implements SubjectInterface
      * Returns pressure
      * @return float
      */
-    public function getPressure()
+    public function getPressure(): float
     {
         return $this->pressure;
     }

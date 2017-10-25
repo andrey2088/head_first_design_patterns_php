@@ -21,7 +21,7 @@ class DuckAdapter implements TurkeyInterface
     /**
      * Gobble
      */
-    public function gobble()
+    public function gobble(): void
     {
         $this->duck->quack();
     }
@@ -29,7 +29,7 @@ class DuckAdapter implements TurkeyInterface
     /**
      * Fly
      */
-    public function fly()
+    public function fly(): void
     {
         if (rand(0, 4)  == 0) {
             $this->duck->fly();

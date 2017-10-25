@@ -25,7 +25,7 @@ class Tv
     /**
      * Turns TV on
      */
-    public function on()
+    public function on(): void
     {
         echo $this->location . " TV is on<br />";
     }
@@ -33,7 +33,7 @@ class Tv
     /**
      * Turns TV off
      */
-    public function off()
+    public function off(): void
     {
         echo $this->location . " TV is off<br />";
     }
@@ -41,7 +41,7 @@ class Tv
     /**
      * Sets input channel
      */
-    public function setInputChannel()
+    public function setInputChannel(): void
     {
         $this->channel = 3;
         echo $this->location . " TV channel is set for DVD<br />";

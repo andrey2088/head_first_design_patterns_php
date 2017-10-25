@@ -21,7 +21,7 @@ class Screen
     /**
      * Up
      */
-    public function up()
+    public function up(): void
     {
         echo $this->description . " going up<br />";
     }
@@ -29,7 +29,7 @@ class Screen
     /**
      * Down
      */
-    public function down()
+    public function down(): void
     {
         echo $this->description . " going down<br />";
     }
@@ -38,7 +38,7 @@ class Screen
      * Magic method
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         return $this->description;
     }

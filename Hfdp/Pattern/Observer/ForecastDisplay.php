@@ -8,17 +8,17 @@ class ForecastDisplay implements ObserverInterface, DisplayElementInterface
      * @var float
      */
     private $currentPressure = 29.92;
-    
+
     /**
      * @var float
      */
     private $lastPressure;
-    
+
     /**
      * @var WeatherData
      */
     private $weatherData;
-    
+
     /**
      * Constructor
      * @param SubjectInterface $weatherData
@@ -28,13 +28,13 @@ class ForecastDisplay implements ObserverInterface, DisplayElementInterface
         $this->weatherData = $weatherData;
         $this->weatherData->registerObserver($this);
     }
-    
+
     /**
      * Update
      * @param SubjectInterface $subj
      * @param mixed $arg
      */
-    public function update(SubjectInterface $subj, $arg = null)
+    public function update(SubjectInterface $subj, $arg = null): void
     {
         if ($subj instanceof WeatherData) {
             $this->lastPressure = $this->currentPressure;
@@ -42,11 +42,11 @@ class ForecastDisplay implements ObserverInterface, DisplayElementInterface
             $this->display();
         }
     }
-    
+
     /**
      * Display
      */
-    public function display()
+    public function display(): void
     {
         $message = "Forecast: ";
         if ($this->currentPressure > $this->lastPressure) {

@@ -8,7 +8,7 @@ class CountingDuckFactory extends AbstractDuckFactory
      * Create mallard duck
      * @return QuackableInterface
      */
-    public function createMallardDuck()
+    public function createMallardDuck(): QuackableInterface
     {
         return new QuackCounter(new MallardDuck());
     }
@@ -17,7 +17,7 @@ class CountingDuckFactory extends AbstractDuckFactory
      * Create redhead duck
      * @return QuackableInterface
      */
-    public function createRedheadDuck()
+    public function createRedheadDuck(): QuackableInterface
     {
         return new QuackCounter(new RedheadDuck());
     }
@@ -26,7 +26,7 @@ class CountingDuckFactory extends AbstractDuckFactory
      * Create duck call
      * @return QuackableInterface
      */
-    public function createDuckCall()
+    public function createDuckCall(): QuackableInterface
     {
         return new QuackCounter(new DuckCall());
     }
@@ -35,7 +35,7 @@ class CountingDuckFactory extends AbstractDuckFactory
      * Create rubber duck
      * @return QuackableInterface
      */
-    public function createRubberDuck()
+    public function createRubberDuck(): QuackableInterface
     {
         return new QuackCounter(new RubberDuck());
     }

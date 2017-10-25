@@ -9,10 +9,10 @@ class SimplePizzaFactory
      * @param string $type
      * @return AbstractPizza
      */
-    public function createPizza($type)
+    public function createPizza($type): AbstractPizza
     {
         $pizza = null;
-        
+
         if (strcmp($type, "cheese") === 0) {
             $pizza = new CheesePizza();
         } if (strcmp($type, "clam") === 0) {
@@ -22,7 +22,7 @@ class SimplePizzaFactory
         } if (strcmp($type, "veggie") === 0) {
             $pizza = new VeggiePizza();
         }
-        
+
         return $pizza;
     }
 }

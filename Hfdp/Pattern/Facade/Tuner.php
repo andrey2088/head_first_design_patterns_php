@@ -32,7 +32,7 @@ class Tuner
     /**
      * On
      */
-    public function on()
+    public function on(): void
     {
         echo $this->description . " on<br />";
     }
@@ -40,7 +40,7 @@ class Tuner
     /**
      * Off
      */
-    public function off()
+    public function off(): void
     {
         echo $this->description . " off<br />";
     }
@@ -49,7 +49,7 @@ class Tuner
      * Set frquency
      * @param float $frequency
      */
-    public function setFrequency(float $frequency)
+    public function setFrequency(float $frequency): void
     {
         echo $this->description . " setting frequency to " . $frequency . "<br />";
         $this->frequency = $frequency;
@@ -58,7 +58,7 @@ class Tuner
     /**
      * Set AM
      */
-    public function setAm()
+    public function setAm(): void
     {
        echo $this->description . " setting AM mode<br />";
     }
@@ -66,7 +66,7 @@ class Tuner
     /**
      * Set FM
      */
-    public function setFm()
+    public function setFm(): void
     {
        echo $this->description . " setting FM mode<br />";
     }
@@ -75,7 +75,7 @@ class Tuner
      * Magic method
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         return $this->description;
     }
